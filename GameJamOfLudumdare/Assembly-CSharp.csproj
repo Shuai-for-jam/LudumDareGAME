@@ -36,8 +36,8 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
      <Compile Include="Assets\Scripts_Jacky\Planet_selfRotate.cs" />
+     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
      <None Include="Assets\unity3d.txt" />
     <Reference Include="UnityEngine">
         <HintPath>D:\Unity\UnityDifferentVertions\2021.3.18f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
