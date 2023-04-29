@@ -1,20 +1,346 @@
 Using pre-set license
 Built from '2021.3/china_unity/release' branch; Version is '2021.3.18f1c1 (93698379025b) revision 9660803'; Using compiler version '192829333'; Build Type 'Release'
 OS: 'Windows 11  (10.0.22621) 64bit CoreCountrySpecific' Language: 'zh' Physical Memory: 65154 MB
-received signal from system: SIGSEGV
-Obtained 14 stack frames
-RtlLookupFunctionEntry returned NULL function. Aborting stack walk.
-0x00007ff621ce7e0d (Unity) StackWalker::GetCurrentCallstack
-0x00007ff621cee9c9 (Unity) StackWalker::ShowCallstack
-0x00007ff622c856c3 (Unity) GetStacktrace
-0x00007ff621ceda06 (Unity) winutils::PrintStackTrace
-0x00007ff621ce743c (Unity) winutils::CrashHandler::DefaultSignalHandler
-0x00007ff6240ba0ee (Unity) seh_filter_exe
-0x00007ff62417c428 (Unity) `__scrt_common_main_seh'::`1'::filt$0
-0x00007ff624086a20 (Unity) _C_specific_handler
-0x00007ff996db3cff (ntdll) _chkstk
-0x00007ff996d2e456 (ntdll) RtlFindCharInUnicodeString
-0x00007ff996db2cee (ntdll) KiUserExceptionDispatcher
-0x00007ff6230509f4 (Unity) WorkerLicense::HasEntitlement
-<Missing stacktrace information>
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
+COMMAND LINE ARGUMENTS:
+D:\Unity\UnityDifferentVertions\2021.3.18f1c1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/Zhangzonshuai/Documents/GitHub/LudumDareGAME/GameJamOfLudumdare
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+59536
+Successfully changed project path to: C:/Users/Zhangzonshuai/Documents/GitHub/LudumDareGAME/GameJamOfLudumdare
+C:/Users/Zhangzonshuai/Documents/GitHub/LudumDareGAME/GameJamOfLudumdare
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [46040] Host "[IP] 192.168.1.29 [Port] 0 [Flags] 2 [Guid] 2421046604 [EditorId] 2421046604 [Version] 1048832 [Id] WindowsEditor(7,Barry) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [46040] Host "[IP] 192.168.1.29 [Port] 0 [Flags] 2 [Guid] 2421046604 [EditorId] 2421046604 [Version] 1048832 [Id] WindowsEditor(7,Barry) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+AS: AutoStreaming module initializing.
+Refreshing native plugins compatible for Editor in 68.08 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.18f1c1 (93698379025b)
+[Subsystems] Discovering subsystems at path D:/Unity/UnityDifferentVertions/2021.3.18f1c1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Zhangzonshuai/Documents/GitHub/LudumDareGAME/GameJamOfLudumdare/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 4080 Laptop GPU (ID=0x27e0)
+    Vendor:   NVIDIA
+    VRAM:     12011 MB
+    Driver:   31.0.15.2866
+Initialize mono
+Mono path[0] = 'D:/Unity/UnityDifferentVertions/2021.3.18f1c1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/UnityDifferentVertions/2021.3.18f1c1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Unity/UnityDifferentVertions/2021.3.18f1c1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56316
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Unity/UnityDifferentVertions/2021.3.18f1c1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: D:/Unity/UnityDifferentVertions/2021.3.18f1c1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002593 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 67.45 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.405 seconds
+Domain Reload Profiling:
+	ReloadAssembly (406ms)
+		BeginReloadAssembly (59ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (0ms)
+		EndReloadAssembly (277ms)
+			LoadAssemblies (55ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (59ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (14ms)
+			SetupLoadedEditorAssemblies (168ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (67ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (67ms)
+				ProcessInitializeOnLoadMethodAttributes (28ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.010622 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Zhangzonshuai\Documents\GitHub\LudumDareGAME\GameJamOfLudumdare\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Zhangzonshuai\Documents\GitHub\LudumDareGAME\GameJamOfLudumdare\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 74.31 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.980 seconds
+Domain Reload Profiling:
+	ReloadAssembly (981ms)
+		BeginReloadAssembly (94ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (12ms)
+		EndReloadAssembly (810ms)
+			LoadAssemblies (82ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (249ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (46ms)
+			SetupLoadedEditorAssemblies (393ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (74ms)
+				BeforeProcessingInitializeOnLoad (69ms)
+				ProcessInitializeOnLoadAttributes (182ms)
+				ProcessInitializeOnLoadMethodAttributes (54ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.60 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5083 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 42 unused Assets / (1.1 MB). Loaded Objects now: 5534.
+Memory consumption went from 278.1 MB to 276.9 MB.
+Total: 3.662500 ms (FindLiveObjects: 0.243500 ms CreateObjectMapping: 0.076200 ms MarkObjects: 2.925700 ms  DeleteObjects: 0.416300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1143895.309918 seconds.
+  path: Assets/Shuai_assets/zzsScripts
+  artifactKey: Guid(39482c138f59a754ab58efc72fcc88f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shuai_assets/zzsScripts using Guid(39482c138f59a754ab58efc72fcc88f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6571dcee5b8b533ed6645dce66927660') in 0.008008 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.139864 seconds.
+  path: Assets/Shuai_assets/Mat_demo
+  artifactKey: Guid(96ca1073509346541ab3ddbc16b6f5b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shuai_assets/Mat_demo using Guid(96ca1073509346541ab3ddbc16b6f5b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c07c9baee189dd06edbde309c98adc60') in 0.002025 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.051946 seconds.
+  path: Assets/Shuai_assets/Mat_demo/bottle.mat
+  artifactKey: Guid(22d2bfcc1762d54458ab530aad427658) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shuai_assets/Mat_demo/bottle.mat using Guid(22d2bfcc1762d54458ab530aad427658) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2953069fea0196188c31cc30b46881dd') in 0.170180 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Shuai_assets/Mat_demo/Land.mat
+  artifactKey: Guid(fa0cba45b60d6bb47bf7d02e06685341) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shuai_assets/Mat_demo/Land.mat using Guid(fa0cba45b60d6bb47bf7d02e06685341) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d7159c724d3265a88a4ec1105d86195') in 0.011694 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.615174 seconds.
+  path: Assets/Shuai_assets/Model
+  artifactKey: Guid(1d05a7fe92c7e8f49a26c268739eb769) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shuai_assets/Model using Guid(1d05a7fe92c7e8f49a26c268739eb769) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '906aa6f08f3b0656d1974c240ae687ca') in 0.002251 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.679184 seconds.
+  path: Assets/Shuai_assets/Texture
+  artifactKey: Guid(0fa85bb2ea6dcda4fbf94be7f059d0a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shuai_assets/Texture using Guid(0fa85bb2ea6dcda4fbf94be7f059d0a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ce18ac1f6b9a5dcfb9f94c8ae2ddf9f') in 0.002633 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.762406 seconds.
+  path: Assets/Shuai_assets/Mat_mainscene
+  artifactKey: Guid(430148f82d2e3744f87dfd43f38af71b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shuai_assets/Mat_mainscene using Guid(430148f82d2e3744f87dfd43f38af71b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cee53dbee4c28b4bdc262973a7c1904d') in 0.002231 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 37.931491 seconds.
+  path: Assets/Shuai_assets/Model/planet_ground.FBX
+  artifactKey: Guid(affb0412faeb4a24183ab3e43c207312) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shuai_assets/Model/planet_ground.FBX using Guid(affb0412faeb4a24183ab3e43c207312) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e7c6c70112e944e67f01b418a33ed09') in 0.063888 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 50.151688 seconds.
+  path: Assets/Shuai_assets/Prefabs
+  artifactKey: Guid(2dc81dd6d15376d428885f1ec5a257f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shuai_assets/Prefabs using Guid(2dc81dd6d15376d428885f1ec5a257f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8a6576322808ecb0359e1486b6cad4c') in 0.002279 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.655907 seconds.
+  path: Assets/Shuai_assets/Prefabs/The Planet.prefab
+  artifactKey: Guid(2af1aa0056f77fa4c808b9ca2f21993d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shuai_assets/Prefabs/The Planet.prefab using Guid(2af1aa0056f77fa4c808b9ca2f21993d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1b2153ff13de9f89a7d51e24e23ba45') in 0.017705 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.399362 seconds.
+  path: Assets/Shuai_assets/Mat_mainscene/Water.mat
+  artifactKey: Guid(87a2ac287ada23148965fb9ae34f7b90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shuai_assets/Mat_mainscene/Water.mat using Guid(87a2ac287ada23148965fb9ae34f7b90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ebb8e374a432494aaeaf63e80ae4ca2') in 0.008413 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.938935 seconds.
+  path: Assets/Shuai_assets/Mat_mainscene/Planet_Ground.mat
+  artifactKey: Guid(11f889f5e4228ed4eb9e679ecadce913) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shuai_assets/Mat_mainscene/Planet_Ground.mat using Guid(11f889f5e4228ed4eb9e679ecadce913) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36d0c942271f8979f5df9b801715bbbe') in 0.009767 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 38.591552 seconds.
+  path: Assets/Shuai_assets/Texture/planet_ground_diffuse.tga
+  artifactKey: Guid(a4ecf85bb632bb94ea0e70d71e145042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shuai_assets/Texture/planet_ground_diffuse.tga using Guid(a4ecf85bb632bb94ea0e70d71e145042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b759e7ec2be7835df2ea649ae90b81ad') in 0.026126 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 119.780035 seconds.
+  path: Assets/Shuai_assets/Texture/planet_ground_Albedo.tga
+  artifactKey: Guid(f3db757206a87ba42913787958600933) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shuai_assets/Texture/planet_ground_Albedo.tga using Guid(f3db757206a87ba42913787958600933) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3e704a1597c3fe5fd79788bf0866821') in 0.009088 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 811.916918 seconds.
+  path: Assets/Shuai_assets/Texture/Water_normal.png
+  artifactKey: Guid(c078103075f129c4f8a0fe3981210002) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shuai_assets/Texture/Water_normal.png using Guid(c078103075f129c4f8a0fe3981210002) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '467f8ce2201bfa66a20841b704bfb93a') in 0.025691 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.787435 seconds.
+  path: Assets/Shuai_assets/Mat_mainscene/Planet_Ground.mat
+  artifactKey: Guid(11f889f5e4228ed4eb9e679ecadce913) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shuai_assets/Mat_mainscene/Planet_Ground.mat using Guid(11f889f5e4228ed4eb9e679ecadce913) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6dafdc449a1e8704823bbaab7cf78c9b') in 0.419214 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.566726 seconds.
+  path: Assets/Shuai_assets/Texture/Water_normal.png
+  artifactKey: Guid(c078103075f129c4f8a0fe3981210002) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shuai_assets/Texture/Water_normal.png using Guid(c078103075f129c4f8a0fe3981210002) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a478e2603232a3f4439a20b7d3fbfa84') in 0.013438 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 111.862301 seconds.
+  path: Assets/Shuai_assets/Texture/Water_normal.png
+  artifactKey: Guid(c078103075f129c4f8a0fe3981210002) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shuai_assets/Texture/Water_normal.png using Guid(c078103075f129c4f8a0fe3981210002) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec4ae6a6c093b137df08919f0a97cf63') in 0.016582 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 37.317874 seconds.
+  path: Assets/Shuai_assets/Texture/Water_normal.png
+  artifactKey: Guid(c078103075f129c4f8a0fe3981210002) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shuai_assets/Texture/Water_normal.png using Guid(c078103075f129c4f8a0fe3981210002) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '896c6d2da849184d0d705e414150dbda') in 0.015138 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 52.029673 seconds.
+  path: Assets/Shuai_assets/Texture/Water_normal.png
+  artifactKey: Guid(c078103075f129c4f8a0fe3981210002) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shuai_assets/Texture/Water_normal.png using Guid(c078103075f129c4f8a0fe3981210002) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d0f5d621972e65b4d1ca9306e05723c') in 0.012826 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.013984 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Zhangzonshuai\Documents\GitHub\LudumDareGAME\GameJamOfLudumdare\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Zhangzonshuai\Documents\GitHub\LudumDareGAME\GameJamOfLudumdare\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.61 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.779 seconds
+Domain Reload Profiling:
+	ReloadAssembly (780ms)
+		BeginReloadAssembly (111ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (26ms)
+		EndReloadAssembly (594ms)
+			LoadAssemblies (83ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (149ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (29ms)
+			SetupLoadedEditorAssemblies (271ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (57ms)
+				ProcessInitializeOnLoadAttributes (146ms)
+				ProcessInitializeOnLoadMethodAttributes (44ms)
+				AfterProcessingInitializeOnLoad (13ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (19ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.45 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4957 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 35 unused Assets / (1.1 MB). Loaded Objects now: 5639.
+Memory consumption went from 276.6 MB to 275.5 MB.
+Total: 2.702300 ms (FindLiveObjects: 0.245100 ms CreateObjectMapping: 0.082800 ms MarkObjects: 2.016000 ms  DeleteObjects: 0.357500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
