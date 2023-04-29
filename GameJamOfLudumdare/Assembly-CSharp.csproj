@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\LowPolyEarth\EarthSpinScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\unity3d.txt" />
