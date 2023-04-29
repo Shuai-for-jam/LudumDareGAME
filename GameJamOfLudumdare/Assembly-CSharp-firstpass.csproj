@@ -261,11 +261,11 @@
      <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\Plugins\ToolBuddy\Dependencies\LibTessDotNet\LibTessDotNetLicense.txt" />
      <None Include="Assets\Plugins\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-     <None Include="Assets\Plugins\SimpleLowPolyNature\Readme.txt" />
+     <None Include="Assets\Plugins\LowPolyAssets\SimpleLowPolyNature\Readme.txt" />
      <None Include="Assets\Plugins\ToolBuddy\Assets\Curvy\ClassTemplates\CGModuleTemplate.txt" />
      <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\Plugins\Z ! Low Poly Nature Pack\Shader\LowPoly_Water.shader" />
-     <None Include="Assets\Plugins\SimpleLowPolyNature\Shaders\SimpleWater.shader" />
+     <None Include="Assets\Plugins\LowPolyAssets\SimpleLowPolyNature\Shaders\SimpleWater.shader" />
      <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\Plugins\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
