@@ -42,8 +42,10 @@
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\Controllers\OnPositionReachedSettings.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\Controllers\ConnectedControlPointsSelector.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Dependencies\LibTessDotNet\PriorityHeap.cs" />
+     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\CG\CGMeshResource.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Arrays Pooling\Pools\ArrayPool.cs" />
+     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\CG Modules\DeformMesh.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Dependencies\DevTools\Classes\Attributes.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Dependencies\DevTools\Classes\ThreadPoolWorker.cs" />
@@ -55,13 +57,17 @@
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\CG Modules\CreateGameObject.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\CG Modules\ModifierMixPaths.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy Examples\Scripts\E50_SplineRefMetadata.cs" />
+     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\CG Modules\Base\SplineInputModuleBase.cs" />
+     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy Examples\Scripts\E98_CurvyCamController.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\Splines\Metadata\CurvyInterpolatableMetadataBaseGeneric.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\CG\CGResource.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\CG\CGModule.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy Examples\Scripts\E29_ControlPointMover.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Dependencies\DevTools\Components\DuplicateEditorMesh.cs" />
+     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
+     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\CG Modules\InputTransformSpots.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\Shapes\CSPie.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Dependencies\DevTools\Components\PoolManager.cs" />
@@ -83,40 +89,54 @@
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\Splines\CurvySplineDefaultValues.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\Splines\CurvySplineSegment.ControlPointExtrinsicProperties.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Dependencies\Vector Graphics\Runtime\SVGParser.cs" />
+     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Dependencies\Vector Graphics\Runtime\SVGStyleSheet.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\CG Modules\DebugVolume.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Arrays Pooling\Collections\SubArrayList.cs" />
+     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\CG Modules\InputSplineShape.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\CG Modules\BuildShapeExtrusion.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Dependencies\LibTessDotNet\Sweep.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\Pools\ArrayPools.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Dependencies\DevTools\Components\PrefabPool.cs" />
+     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy Examples\Scripts\E25_SplineControllerInputRail.cs" />
+     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
+     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Dependencies\Vector Graphics\Runtime\Matrix2D.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\ImportExport\SplineJsonConverter.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy Examples\Scripts\E51_InfiniteTrack.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\CG\CGModuleSlot.cs" />
+     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy Examples\Scripts\E05_SmoothFollow.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\CG Modules\BuildVolumeSpots.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\Controllers\TargetComponent.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\CG Modules\InputMesh.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Dependencies\DevTools\Classes\DTObjectDump.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\Misc\BSplineHelper.cs" />
+     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\Other Components\CurvyLineRenderer.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\CG\CGInterfaces.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\CG\CGEvents.cs" />
+     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
+     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Dependencies\DevTools\Components\InspectorNote.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy Examples\Scripts\SceneSwitcher.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\Misc\CurvyClasses.cs" />
+     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy Examples\Scripts\E99_PerformanceAPI.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy Examples\Scripts\E27_MixingAnimator.cs" />
+     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\Controllers\UITextSplineController.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy Examples\Scripts\ChaseCam.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Dependencies\LibTessDotNet\UnityUtility.cs" />
+     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\Controllers\ControllersEvents.cs" />
+     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Dependencies\DevTools\Components\ComponentPool.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\Splines\CurvySpline.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\Shapes\CurvyShape.cs" />
+     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\Splines\Connections\CurvyConnection.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\CG Modules\ModifierVariableMixShapes.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\CG Modules\ModifierTRSPath.cs" />
@@ -126,6 +146,7 @@
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\Controllers\MovementDirection.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\CG\CurvyPropertyAttributes.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\ImportExport\SplineSvgConverter.cs" />
+     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\Misc\CodeContractsUtility.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Dependencies\DevTools\Classes\Couple.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\Controllers\SplineController.cs" />
@@ -138,10 +159,12 @@
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\Other Components\CurvyGLRenderer.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Arrays Pooling\Pools\ArrayPoolUsageData.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\CG\CGData.cs" />
+     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\CG\CGModuleLink.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\Other Components\CurvyGlobalManager.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\CG\CGDataRequests.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Dependencies\Vector Graphics\Runtime\VectorRectangle.cs" />
+     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy Examples\Scripts\E13_TrainCarDrifter.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Dependencies\DevTools\Classes\PropertyAttributes.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\CG Modules\ModifierTRSMesh.cs" />
@@ -149,6 +172,7 @@
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy Examples\Scripts\E05_MoveToNearestPoint.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Dependencies\LibTessDotNet\Tess.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Dependencies\LibTessDotNet\LTMesh.cs" />
+     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\Controllers\PathController.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy Examples\Scripts\E50_RunnerController.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\Misc\CurvyEvents.cs" />
@@ -159,19 +183,23 @@
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\Splines\CurvyUISpline.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\ImportExport\Wrappers.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy Examples\Scripts\E12_ToggleBehaviourByTrigger.cs" />
+     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy Examples\Scripts\E02_AnimationHelper.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\CG Modules\Base\ScalingModule.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\CG Modules\CreatePathLineRenderer.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Dependencies\Vector Graphics\Runtime\VectorTessellation.cs" />
+     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\Splines\SplineEvents.cs" />
      <Compile Include="Assets\Plugins\ModelPlugins\LowPolyEarth\EarthSpinScript.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Arrays Pooling\ArrayPoolsProvider.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Dependencies\LibTessDotNet\Geom.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\Pools\ArrayPoolsSettings.cs" />
+     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\CG Modules\Base\TRSModuleBase.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy Examples\Scripts\E12_TrainCarManager.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\Splines\CurvySplineSegmentDefaultValues.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\CG Modules\InputGameObject.cs" />
+     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\CG Modules\BuildVolumeMesh.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\Other Components\NearestSplinePoint.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy Examples\Scripts\E12_TrainManager.cs" />
@@ -181,15 +209,20 @@
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\CG Modules\InputSplinePath.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Dependencies\DevTools\Classes\DTUtility.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\Other Components\CurvySplineToEdgeCollider2D.cs" />
+     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
+     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy Examples\Scripts\E24_TerrainUpdater.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy Examples\Scripts\E04_PaintSpline.cs" />
+     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy Examples\Scripts\E01_MetaDataController.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\CG\CGBoundsGroup.cs" />
+     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Dependencies\DevTools\Extensions\Extensions.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\Controllers\CurvyController.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy Examples\Scripts\E99_PerformanceDynamicSpline.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Dependencies\DevTools\Classes\DTEase.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Dependencies\DevTools\Components\DTSingleton.cs" />
+     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\Splines\SplineDirtyingType.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\Splines\Metadata\CurvyMetadataBase.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\CG Modules\DebugRasterizedPath.cs" />
@@ -197,22 +230,51 @@
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\Splines\CurvySpline_private.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy Examples\Scripts\E01_HeightMetadata.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Dependencies\Vector Graphics\Runtime\VectorEllipse.cs" />
+     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\CG Modules\BuildVolumeCaps.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Dependencies\Vector Graphics\Runtime\VectorUtils.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Arrays Pooling\Collections\SubArray.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\Controllers\VolumeController.cs" />
      <Compile Include="Assets\Plugins\ToolBuddy\Assets\Curvy\Scripts\CG Modules\DebugVMesh.cs" />
+     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMPro.cginc" />
+     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\Plugins\BOXOPHOBIC\Skybox Cubemap Extended\Core\Shaders\Skybox Cubemap Extended.shader" />
+     <None Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
+     <None Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
+     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <None Include="Assets\Plugins\ToolBuddy\Assets\Curvy Examples\_Resources\Shaders\ParticleAdditiveFresnel.shader" />
+     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\Plugins\ToolBuddy\Assets\Curvy\ClassTemplates\ShapeTemplate.txt" />
      <None Include="Assets\Plugins\ToolBuddy\Assets\Curvy\link.xml" />
      <None Include="Assets\Plugins\ToolBuddy\Dependencies\DevTools\DevToolsLicense.txt" />
      <None Include="Assets\Plugins\BOXOPHOBIC\Skybox Cubemap Extended\Core\Shaders\Skybox Cubemap Blend.shader" />
      <None Include="Assets\Plugins\ToolBuddy\Assets\Curvy\ReadMe.txt" />
+     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+     <None Include="Assets\Plugins\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF.shader" />
+     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+     <None Include="Assets\Plugins\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\Plugins\ToolBuddy\Dependencies\LibTessDotNet\LibTessDotNetLicense.txt" />
+     <None Include="Assets\Plugins\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Assets\Plugins\SimpleLowPolyNature\Readme.txt" />
      <None Include="Assets\Plugins\ToolBuddy\Assets\Curvy\ClassTemplates\CGModuleTemplate.txt" />
+     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets\Plugins\Z ! Low Poly Nature Pack\Shader\LowPoly_Water.shader" />
+     <None Include="Assets\Plugins\SimpleLowPolyNature\Shaders\SimpleWater.shader" />
+     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+     <None Include="Assets\Plugins\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+     <None Include="Assets\Plugins\Z ! Low Poly Nature Pack\Shader\TransparentUVAnim.shader" />
+     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_Sprite.shader" />
      <None Include="Assets\Plugins\ToolBuddy\Assets\Curvy\ClassTemplates\CGModuleEditorTemplate.txt" />
      <None Include="Assets\Plugins\ToolBuddy\Assets\Curvy\CurvyLicense.txt" />
+     <None Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
     <Reference Include="UnityEngine">
         <HintPath>D:\Unity\UnityDifferentVertions\2021.3.18f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -885,9 +947,6 @@
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
         <HintPath>C:\Users\Zhangzonshuai\Documents\GitHub\LudumDareGAME\GameJamOfLudumdare\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.Runtime">
-        <HintPath>C:\Users\Zhangzonshuai\Documents\GitHub\LudumDareGAME\GameJamOfLudumdare\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
         <HintPath>C:\Users\Zhangzonshuai\Documents\GitHub\LudumDareGAME\GameJamOfLudumdare\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
     </Reference>
@@ -905,6 +964,9 @@
     </Reference>
     <Reference Include="UnityEngine.UI">
         <HintPath>C:\Users\Zhangzonshuai\Documents\GitHub\LudumDareGAME\GameJamOfLudumdare\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+        <HintPath>C:\Users\Zhangzonshuai\Documents\GitHub\LudumDareGAME\GameJamOfLudumdare\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core">
         <HintPath>C:\Users\Zhangzonshuai\Documents\GitHub\LudumDareGAME\GameJamOfLudumdare\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
@@ -944,17 +1006,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Boxophobic.Utils.Scripts.csproj">
-      <Project>{bdd0bfae-65a9-8bc9-82a5-de0b1c03a898}</Project>
-      <Name>Boxophobic.Utils.Scripts</Name>
+    <ProjectReference Include="Boxophobic.Utils.Editor.csproj">
+      <Project>{79f2f4ec-7b53-8d5d-e7e7-73b6247c9dfe}</Project>
+      <Name>Boxophobic.Utils.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Boxophobic.SkyboxCubemapExtended.Editor.csproj">
       <Project>{e5611625-086e-300c-942d-cd45fd7de65c}</Project>
       <Name>Boxophobic.SkyboxCubemapExtended.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Boxophobic.Utils.Editor.csproj">
-      <Project>{79f2f4ec-7b53-8d5d-e7e7-73b6247c9dfe}</Project>
-      <Name>Boxophobic.Utils.Editor</Name>
+    <ProjectReference Include="Boxophobic.Utils.Scripts.csproj">
+      <Project>{bdd0bfae-65a9-8bc9-82a5-de0b1c03a898}</Project>
+      <Name>Boxophobic.Utils.Scripts</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
