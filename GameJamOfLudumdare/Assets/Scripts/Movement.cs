@@ -9,25 +9,13 @@ public class Movement : MonoBehaviour
     public GameObject bottle;
     public CurvySpline spline1;
 
-
-    void Start()
-    {
-
-    }
-
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.S))
         {
             bottle.GetComponent<SplineController>().Spline = spline1;
         }
-
-
-
-
-
-
-            if (Input.GetKeyDown(KeyCode.R))    //µôÍ·
+            if (Input.GetKeyDown(KeyCode.R))    //ï¿½ï¿½Í·
         {
             if (bottle.GetComponent<SplineController>().MovementDirection == MovementDirection.Forward)
                 bottle.GetComponent<SplineController>().MovementDirection = MovementDirection.Backward;
