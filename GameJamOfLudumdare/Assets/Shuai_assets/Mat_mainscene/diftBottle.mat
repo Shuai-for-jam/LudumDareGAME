@@ -22,7 +22,9 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: diftBottle
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _METALLICSPECGLOSSMAP
+  - _NORMALMAP
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -39,7 +41,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 4e902ab00a37e6843a149f7427715083, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -63,7 +65,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 8df9be495bff5bd4d8da537fdf255479, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -102,25 +104,43 @@ Material:
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _EmissionIntensity: 1
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
+    - _MetallicRemappingHigh: 1
+    - _MetallicRemappingLevelHigh: 1
+    - _MetallicRemappingLevelLow: 0
+    - _MetallicRemappingLow: 0.01
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _Smoothness: 0.5
+    - _SmoothnessRemappingHigh: 1
+    - _SmoothnessRemappingLevelHigh: 1
+    - _SmoothnessRemappingLevelLow: 0
+    - _SmoothnessRemappingLow: 0.01
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
+    - _Transparency: 1
+    - _Use_Albedo: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionColor: {r: 1.885618, g: 2.6808152, b: 2.828427, a: 1}
+    - _SHAb: {r: 0.2108869, g: 0.4276009, b: -0.2584893, a: 0.5372549}
+    - _SHAg: {r: 0.1914412, g: 0.3132915, b: -0.251553, a: 0.5294118}
+    - _SHAr: {r: 0.1410518, g: 0.1996599, b: -0.1916448, a: 0.4627451}
+    - _SHBb: {r: 0.07339491, g: -0.1538019, b: 0.173522, a: 0}
+    - _SHBg: {r: 0.06174606, g: -0.1617367, b: 0.1746086, a: 0}
+    - _SHBr: {r: 0.04257296, g: -0.1443495, b: 0.1463619, a: 0}
+    - _SHC: {r: 0.06419951, g: 0.06835041, b: 0.05078474, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
