@@ -5,6 +5,9 @@ using UnityEngine;
 public class Planet_selfRotate : MonoBehaviour
 {
     public float speed_p = 1f ;
+    public Quaternion endRotation;
+    bool isChange;
+    public Transform bottle;
     void Start()
     {
     }
@@ -12,8 +15,21 @@ public class Planet_selfRotate : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-        
-        if(Input.GetKey(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            isChange = true;
+            endRotation = bottle.localRotation;
+        }
+        if (isChange == true)
+        {
+            transform.rotation = Quaternion.Lerp(transform.rotation, endRotation, 2 * Time.deltaTime);
+            if (transform.rotation.x - bottle.localRotation.x < 0.01f)
+            {
+                isChange = false;
+            }
+        }
+
+        if (Input.GetKey(KeyCode.W))
        { transform.RotateAround(Vector3.zero,Vector3.right,speed_p);}
 
         if(Input.GetKey(KeyCode.A))
