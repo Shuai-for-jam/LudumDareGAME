@@ -36,6 +36,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Movement.cs" />
      <Compile Include="Assets\Scripts_Jacky\Camera_controller.cs" />
      <Compile Include="Assets\Scripts_Jacky\Planet_selfRotate.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
