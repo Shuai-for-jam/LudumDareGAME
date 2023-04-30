@@ -44,9 +44,6 @@ public class collision_bottle : MonoBehaviour
                 Time.timeScale = 1;
             }
         }   
-
-
-        
     }
 
 }

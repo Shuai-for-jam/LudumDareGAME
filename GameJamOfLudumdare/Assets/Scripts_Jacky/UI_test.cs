@@ -27,6 +27,5 @@ public class UI_test : MonoBehaviour
         {
             canSkillA = true;
         }
-
     }
 }
