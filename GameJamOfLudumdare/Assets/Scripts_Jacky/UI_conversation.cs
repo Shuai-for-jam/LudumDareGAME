@@ -45,10 +45,10 @@ public class UI_conversation : MonoBehaviour
 
     void Update()
     {
-        //CA();
-        //CB();
-        //CC();
-        //CD();
+        CA();
+        CB();
+        CC();
+        CD();
         CE();
         RightPanelCheck();
         //if (decVolume == true)
@@ -174,19 +174,23 @@ public class UI_conversation : MonoBehaviour
             characAI.SetActive(true);
             //UI图片出现
 
-            GameObject S0, S1, S2;
+            GameObject S0, S1, S2,S3,S4;
             S0 = characAI.transform.GetChild(0).GetChild(1).GetChild(0).gameObject;
             S1 = characAI.transform.GetChild(0).GetChild(1).GetChild(1).gameObject;
             S2 = characAI.transform.GetChild(0).GetChild(1).GetChild(2).gameObject;
+            S3 = characAI.transform.GetChild(0).GetChild(1).GetChild(3).gameObject;
+            S4 = characAI.transform.GetChild(0).GetChild(1).GetChild(4).gameObject;
             //获取三个会出现的对话
 
             if (Input.GetKeyDown(KeyCode.F))
             {
-                if (count >= 3)
+                if (count >= 5)
                 {
                     S0.SetActive(false);
                     S1.SetActive(false);
                     S2.SetActive(false);
+                    S3.SetActive(false);
+                    S4.SetActive(false);
                     characAi.enabled = false;
                     canInteract = false;
                     Time.timeScale = 1;
@@ -202,11 +206,31 @@ public class UI_conversation : MonoBehaviour
 
                     characAI.SetActive(false);
                 }
+                if (count == 4)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    S3.SetActive(false);
+                    S4.SetActive(true);
+                    count++;
+                }
+                if (count == 3)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    S3.SetActive(true);
+                    S4.SetActive(false);
+                    count++;
+                }
                 if (count == 2)
                 {
                     S0.SetActive(false);
                     S1.SetActive(false);
                     S2.SetActive(true);
+                    S3.SetActive(false);
+                    S4.SetActive(false);
                     count++;
                 }
                 if (count == 1)
@@ -214,6 +238,8 @@ public class UI_conversation : MonoBehaviour
                     S0.SetActive(false);
                     S1.SetActive(true);
                     S2.SetActive(false);
+                    S3.SetActive(false);
+                    S4.SetActive(false);
                     count++;
                 }
                 if (count == 0)
@@ -221,6 +247,8 @@ public class UI_conversation : MonoBehaviour
                     S0.SetActive(true);
                     S1.SetActive(false);
                     S2.SetActive(false);
+                    S3.SetActive(false);
+                    S4.SetActive(false);
                     count++;
                 }
             }
@@ -233,19 +261,21 @@ public class UI_conversation : MonoBehaviour
             characAI.SetActive(true);
             //UI图片出现
 
-            GameObject S0, S1, S2;
+            GameObject S0, S1, S2,S3;
             S0 = characAI.transform.GetChild(0).GetChild(2).GetChild(0).gameObject;
             S1 = characAI.transform.GetChild(0).GetChild(2).GetChild(1).gameObject;
             S2 = characAI.transform.GetChild(0).GetChild(2).GetChild(2).gameObject;
+            S3 = characAI.transform.GetChild(0).GetChild(2).GetChild(3).gameObject;
             //获取三个会出现的对话
 
             if (Input.GetKeyDown(KeyCode.F))
             {
-                if (count >= 3)
+                if (count >= 4)
                 {
                     S0.SetActive(false);
                     S1.SetActive(false);
                     S2.SetActive(false);
+                    S3.SetActive(false);
                     characAi.enabled = false;
                     canInteract = false;
                     Time.timeScale = 1;
@@ -261,11 +291,20 @@ public class UI_conversation : MonoBehaviour
 
                     characAI.SetActive(false);
                 }
+                if (count == 3)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    S3.SetActive(true);
+                    count++;
+                }
                 if (count == 2)
                 {
                     S0.SetActive(false);
                     S1.SetActive(false);
                     S2.SetActive(true);
+                    S3.SetActive(false);
                     count++;
                 }
                 if (count == 1)
@@ -273,6 +312,7 @@ public class UI_conversation : MonoBehaviour
                     S0.SetActive(false);
                     S1.SetActive(true);
                     S2.SetActive(false);
+                    S3.SetActive(false);
                     count++;
                 }
                 if (count == 0)
@@ -280,6 +320,7 @@ public class UI_conversation : MonoBehaviour
                     S0.SetActive(true);
                     S1.SetActive(false);
                     S2.SetActive(false);
+                    S3.SetActive(false);
                     count++;
                 }
             }
@@ -292,19 +333,23 @@ public class UI_conversation : MonoBehaviour
             characAI.SetActive(true);
             //UI图片出现
 
-            GameObject S0, S1, S2;
+            GameObject S0, S1, S2,S3,S4;
             S0 = characAI.transform.GetChild(0).GetChild(3).GetChild(0).gameObject;
             S1 = characAI.transform.GetChild(0).GetChild(3).GetChild(1).gameObject;
             S2 = characAI.transform.GetChild(0).GetChild(3).GetChild(2).gameObject;
+            S3 = characAI.transform.GetChild(0).GetChild(3).GetChild(3).gameObject;
+            S4 = characAI.transform.GetChild(0).GetChild(3).GetChild(4).gameObject;
             //获取三个会出现的对话
 
             if (Input.GetKeyDown(KeyCode.F))
             {
-                if (count >= 3)
+                if (count >= 5)
                 {
                     S0.SetActive(false);
                     S1.SetActive(false);
                     S2.SetActive(false);
+                    S3.SetActive(false);
+                    S4.SetActive(false);
                     characAi.enabled = false;
                     canInteract = false;
                     Time.timeScale = 1;
@@ -320,11 +365,31 @@ public class UI_conversation : MonoBehaviour
 
                     characAI.SetActive(false);
                 }
+                if (count == 4)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    S3.SetActive(false);
+                    S4.SetActive(true);
+                    count++;
+                }
+                if (count == 3)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    S3.SetActive(true);
+                    S4.SetActive(false);
+                    count++;
+                }
                 if (count == 2)
                 {
                     S0.SetActive(false);
                     S1.SetActive(false);
                     S2.SetActive(true);
+                    S3.SetActive(false);
+                    S4.SetActive(false);
                     count++;
                 }
                 if (count == 1)
@@ -332,6 +397,8 @@ public class UI_conversation : MonoBehaviour
                     S0.SetActive(false);
                     S1.SetActive(true);
                     S2.SetActive(false);
+                    S3.SetActive(false);
+                    S4.SetActive(false);
                     count++;
                 }
                 if (count == 0)
@@ -339,6 +406,8 @@ public class UI_conversation : MonoBehaviour
                     S0.SetActive(true);
                     S1.SetActive(false);
                     S2.SetActive(false);
+                    S3.SetActive(false);
+                    S4.SetActive(false);
                     count++;
                 }
             }
@@ -375,19 +444,21 @@ public class UI_conversation : MonoBehaviour
             characBI.SetActive(true);
             //UI图片出现
 
-            GameObject S0, S1, S2;
+            GameObject S0, S1, S2,S3;
             S0 = characBI.transform.GetChild(0).GetChild(0).GetChild(0).gameObject;
             S1 = characBI.transform.GetChild(0).GetChild(0).GetChild(1).gameObject;
             S2 = characBI.transform.GetChild(0).GetChild(0).GetChild(2).gameObject;
+            S3 = characBI.transform.GetChild(0).GetChild(0).GetChild(3).gameObject;
             //获取三个会出现的对话
 
             if (Input.GetKeyDown(KeyCode.F))
             {
-                if (count >= 3)
+                if (count >= 4)
                 {
                     S0.SetActive(false);
                     S1.SetActive(false);
                     S2.SetActive(false);
+                    S3.SetActive(false);
                     characBi.enabled = false;
                     canInteract = false;
                     Time.timeScale = 1;
@@ -402,11 +473,20 @@ public class UI_conversation : MonoBehaviour
 
                     characBI.SetActive(false);
                 }
+                if (count == 3)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    S3.SetActive(true);
+                    count++;
+                }
                 if (count == 2)
                 {
                     S0.SetActive(false);
                     S1.SetActive(false);
                     S2.SetActive(true);
+                    S3.SetActive(false);
                     count++;
                 }
                 if (count == 1)
@@ -414,6 +494,7 @@ public class UI_conversation : MonoBehaviour
                     S0.SetActive(false);
                     S1.SetActive(true);
                     S2.SetActive(false);
+                    S3.SetActive(false);
                     count++;
                 }
                 if (count == 0)
@@ -421,6 +502,7 @@ public class UI_conversation : MonoBehaviour
                     S0.SetActive(true);
                     S1.SetActive(false);
                     S2.SetActive(false);
+                    S3.SetActive(false);
                     count++;
                 }
             }
@@ -432,19 +514,21 @@ public class UI_conversation : MonoBehaviour
             characBi.enabled = true;
             characBI.SetActive(true);
             //UI图片出现
-            GameObject S0, S1, S2;
+            GameObject S0, S1, S2,S3;
             S0 = characBI.transform.GetChild(0).GetChild(1).GetChild(0).gameObject;
             S1 = characBI.transform.GetChild(0).GetChild(1).GetChild(1).gameObject;
             S2 = characBI.transform.GetChild(0).GetChild(1).GetChild(2).gameObject;
+            S3 = characBI.transform.GetChild(0).GetChild(1).GetChild(3).gameObject;
             //获取三个会出现的对话
 
             if (Input.GetKeyDown(KeyCode.F))
             {
-                if (count >= 3)
+                if (count >= 4)
                 {
                     S0.SetActive(false);
                     S1.SetActive(false);
                     S2.SetActive(false);
+                    S3.SetActive(false);
                     characBi.enabled = false;
                     canInteract = false;
                     Time.timeScale = 1;
@@ -459,11 +543,20 @@ public class UI_conversation : MonoBehaviour
 
                     characBI.SetActive(false);
                 }
+                if (count == 3)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    S3.SetActive(true);
+                    count++;
+                }
                 if (count == 2)
                 {
                     S0.SetActive(false);
                     S1.SetActive(false);
                     S2.SetActive(true);
+                    S3.SetActive(false);
                     count++;
                 }
                 if (count == 1)
@@ -471,6 +564,7 @@ public class UI_conversation : MonoBehaviour
                     S0.SetActive(false);
                     S1.SetActive(true);
                     S2.SetActive(false);
+                    S3.SetActive(false);
                     count++;
                 }
                 if (count == 0)
@@ -478,6 +572,7 @@ public class UI_conversation : MonoBehaviour
                     S0.SetActive(true);
                     S1.SetActive(false);
                     S2.SetActive(false);
+                    S3.SetActive(false);
                     count++;
                 }
             }
@@ -489,19 +584,21 @@ public class UI_conversation : MonoBehaviour
             characBi.enabled = true;
             characBI.SetActive(true);
             //UI图片出现
-            GameObject S0, S1, S2;
+            GameObject S0, S1, S2,S3;
             S0 = characBI.transform.GetChild(0).GetChild(2).GetChild(0).gameObject;
             S1 = characBI.transform.GetChild(0).GetChild(2).GetChild(1).gameObject;
             S2 = characBI.transform.GetChild(0).GetChild(2).GetChild(2).gameObject;
+            S3 = characBI.transform.GetChild(0).GetChild(2).GetChild(3).gameObject;
             //获取三个会出现的对话
 
             if (Input.GetKeyDown(KeyCode.F))
             {
-                if (count >= 3)
+                if (count >= 4)
                 {
                     S0.SetActive(false);
                     S1.SetActive(false);
                     S2.SetActive(false);
+                    S3.SetActive(false);
                     characBi.enabled = false;
                     canInteract = false;
                     Time.timeScale = 1;
@@ -516,11 +613,20 @@ public class UI_conversation : MonoBehaviour
 
                     characBI.SetActive(false);
                 }
+                if (count == 3)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    S3.SetActive(true);
+                    count++;
+                }
                 if (count == 2)
                 {
                     S0.SetActive(false);
                     S1.SetActive(false);
                     S2.SetActive(true);
+                    S3.SetActive(false);
                     count++;
                 }
                 if (count == 1)
@@ -528,6 +634,7 @@ public class UI_conversation : MonoBehaviour
                     S0.SetActive(false);
                     S1.SetActive(true);
                     S2.SetActive(false);
+                    S3.SetActive(false);
                     count++;
                 }
                 if (count == 0)
@@ -535,6 +642,7 @@ public class UI_conversation : MonoBehaviour
                     S0.SetActive(true);
                     S1.SetActive(false);
                     S2.SetActive(false);
+                    S3.SetActive(false);
                     count++;
                 }
             }
@@ -546,19 +654,23 @@ public class UI_conversation : MonoBehaviour
             characBi.enabled = true;
             characBI.SetActive(true);
             //UI图片出现
-            GameObject S0, S1, S2;
+            GameObject S0, S1, S2,S3,S4;
             S0 = characBI.transform.GetChild(0).GetChild(3).GetChild(0).gameObject;
             S1 = characBI.transform.GetChild(0).GetChild(3).GetChild(1).gameObject;
             S2 = characBI.transform.GetChild(0).GetChild(3).GetChild(2).gameObject;
+            S3 = characBI.transform.GetChild(0).GetChild(3).GetChild(3).gameObject;
+            S4 = characBI.transform.GetChild(0).GetChild(3).GetChild(4).gameObject;
             //获取三个会出现的对话
 
             if (Input.GetKeyDown(KeyCode.F))
             {
-                if (count >= 3)
+                if (count >= 5)
                 {
                     S0.SetActive(false);
                     S1.SetActive(false);
                     S2.SetActive(false);
+                    S3.SetActive(false);
+                    S4.SetActive(false);
                     characBi.enabled = false;
                     canInteract = false;
                     Time.timeScale = 1;
@@ -573,11 +685,31 @@ public class UI_conversation : MonoBehaviour
 
                     characBI.SetActive(false);
                 }
+                if (count == 4)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    S3.SetActive(false);
+                    S4.SetActive(true);
+                    count++;
+                }
+                if (count == 3)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    S3.SetActive(true);
+                    S4.SetActive(false);
+                    count++;
+                }
                 if (count == 2)
                 {
                     S0.SetActive(false);
                     S1.SetActive(false);
                     S2.SetActive(true);
+                    S3.SetActive(false);
+                    S4.SetActive(false);
                     count++;
                 }
                 if (count == 1)
@@ -585,6 +717,8 @@ public class UI_conversation : MonoBehaviour
                     S0.SetActive(false);
                     S1.SetActive(true);
                     S2.SetActive(false);
+                    S3.SetActive(false);
+                    S4.SetActive(false);
                     count++;
                 }
                 if (count == 0)
@@ -592,6 +726,8 @@ public class UI_conversation : MonoBehaviour
                     S0.SetActive(true);
                     S1.SetActive(false);
                     S2.SetActive(false);
+                    S3.SetActive(false);
+                    S4.SetActive(false);
                     count++;
                 }
             }
@@ -627,19 +763,23 @@ public class UI_conversation : MonoBehaviour
             characCi.enabled = true;
             characCI.SetActive(true);
             //UI图片出现
-            GameObject S0, S1, S2;
+            GameObject S0, S1, S2,S3,S4;
             S0 = characCI.transform.GetChild(0).GetChild(0).GetChild(0).gameObject;
             S1 = characCI.transform.GetChild(0).GetChild(0).GetChild(1).gameObject;
             S2 = characCI.transform.GetChild(0).GetChild(0).GetChild(2).gameObject;
+            S3 = characCI.transform.GetChild(0).GetChild(0).GetChild(3).gameObject;
+            S4 = characCI.transform.GetChild(0).GetChild(0).GetChild(4).gameObject;
             //获取三个会出现的对话
 
             if (Input.GetKeyDown(KeyCode.F))
             {
-                if (count >= 3)
+                if (count >= 5)
                 {
                     S0.SetActive(false);
                     S1.SetActive(false);
                     S2.SetActive(false);
+                    S3.SetActive(false);
+                    S4.SetActive(false);
                     characCi.enabled = false;
                     canInteract = false;
                     Time.timeScale = 1;
@@ -654,11 +794,31 @@ public class UI_conversation : MonoBehaviour
 
                     characCI.SetActive(false);
                 }
+                if (count == 4)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    S3.SetActive(false);
+                    S4.SetActive(true);
+                    count++;
+                }
+                if (count == 3)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    S3.SetActive(true);
+                    S4.SetActive(false);
+                    count++;
+                }
                 if (count == 2)
                 {
                     S0.SetActive(false);
                     S1.SetActive(false);
                     S2.SetActive(true);
+                    S3.SetActive(false);
+                    S4.SetActive(false);
                     count++;
                 }
                 if (count == 1)
@@ -666,6 +826,8 @@ public class UI_conversation : MonoBehaviour
                     S0.SetActive(false);
                     S1.SetActive(true);
                     S2.SetActive(false);
+                    S3.SetActive(false);
+                    S4.SetActive(false);
                     count++;
                 }
                 if (count == 0)
@@ -673,6 +835,8 @@ public class UI_conversation : MonoBehaviour
                     S0.SetActive(true);
                     S1.SetActive(false);
                     S2.SetActive(false);
+                    S3.SetActive(false);
+                    S4.SetActive(false);
                     count++;
                 }
             }
@@ -743,19 +907,25 @@ public class UI_conversation : MonoBehaviour
             characCi.enabled = true;
             characCI.SetActive(true);
             //UI图片出现
-            GameObject S0, S1, S2;
+            GameObject S0, S1, S2,S3,S4,S5;
             S0 = characCI.transform.GetChild(0).GetChild(2).GetChild(0).gameObject;
             S1 = characCI.transform.GetChild(0).GetChild(2).GetChild(1).gameObject;
             S2 = characCI.transform.GetChild(0).GetChild(2).GetChild(2).gameObject;
+            S3 = characCI.transform.GetChild(0).GetChild(2).GetChild(3).gameObject;
+            S4 = characCI.transform.GetChild(0).GetChild(2).GetChild(4).gameObject;
+            S5 = characCI.transform.GetChild(0).GetChild(2).GetChild(5).gameObject;
             //获取三个会出现的对话
 
             if (Input.GetKeyDown(KeyCode.F))
             {
-                if (count >= 3)
+                if (count >= 6)
                 {
                     S0.SetActive(false);
                     S1.SetActive(false);
                     S2.SetActive(false);
+                    S3.SetActive(false);
+                    S4.SetActive(false);
+                    S5.SetActive(false);
                     characCi.enabled = false;
                     canInteract = false;
                     Time.timeScale = 1;
@@ -770,11 +940,44 @@ public class UI_conversation : MonoBehaviour
 
                     characCI.SetActive(false);
                 }
+                if (count == 5)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    S3.SetActive(false);
+                    S4.SetActive(false);
+                    S5.SetActive(true);
+                    count++;
+                }
+                if (count == 4)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    S3.SetActive(false);
+                    S4.SetActive(true);
+                    S5.SetActive(false);
+                    count++;
+                }
+                if (count == 3)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(true);
+                    S3.SetActive(false);
+                    S4.SetActive(false);
+                    S5.SetActive(false);
+                    count++;
+                }
                 if (count == 2)
                 {
                     S0.SetActive(false);
                     S1.SetActive(false);
                     S2.SetActive(true);
+                    S3.SetActive(false);
+                    S4.SetActive(false);
+                    S5.SetActive(false);
                     count++;
                 }
                 if (count == 1)
@@ -782,6 +985,9 @@ public class UI_conversation : MonoBehaviour
                     S0.SetActive(false);
                     S1.SetActive(true);
                     S2.SetActive(false);
+                    S3.SetActive(false);
+                    S4.SetActive(false);
+                    S5.SetActive(false);
                     count++;
                 }
                 if (count == 0)
@@ -789,6 +995,9 @@ public class UI_conversation : MonoBehaviour
                     S0.SetActive(true);
                     S1.SetActive(false);
                     S2.SetActive(false);
+                    S3.SetActive(false);
+                    S4.SetActive(false);
+                    S5.SetActive(false);
                     count++;
                 }
             }
@@ -801,19 +1010,23 @@ public class UI_conversation : MonoBehaviour
             characCi.enabled = true;
             characCI.SetActive(true);
             //UI图片出现
-            GameObject S0, S1, S2;
+            GameObject S0, S1, S2,S3,S4;
             S0 = characCI.transform.GetChild(0).GetChild(3).GetChild(0).gameObject;
             S1 = characCI.transform.GetChild(0).GetChild(3).GetChild(1).gameObject;
             S2 = characCI.transform.GetChild(0).GetChild(3).GetChild(2).gameObject;
+            S3 = characCI.transform.GetChild(0).GetChild(3).GetChild(3).gameObject;
+            S4 = characCI.transform.GetChild(0).GetChild(3).GetChild(4).gameObject;
             //获取三个会出现的对话
 
             if (Input.GetKeyDown(KeyCode.F))
             {
-                if (count >= 3)
+                if (count >= 5)
                 {
                     S0.SetActive(false);
                     S1.SetActive(false);
                     S2.SetActive(false);
+                    S3.SetActive(false);
+                    S4.SetActive(false);
                     characCi.enabled = false;
                     canInteract = false;
                     Time.timeScale = 1;
@@ -828,11 +1041,31 @@ public class UI_conversation : MonoBehaviour
 
                     characCI.SetActive(false);
                 }
+                if (count == 4)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    S3.SetActive(false);
+                    S4.SetActive(true);
+                    count++;
+                }
+                if (count == 3)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    S3.SetActive(true);
+                    S4.SetActive(false);
+                    count++;
+                }
                 if (count == 2)
                 {
                     S0.SetActive(false);
                     S1.SetActive(false);
                     S2.SetActive(true);
+                    S3.SetActive(false);
+                    S4.SetActive(false);
                     count++;
                 }
                 if (count == 1)
@@ -840,6 +1073,8 @@ public class UI_conversation : MonoBehaviour
                     S0.SetActive(false);
                     S1.SetActive(true);
                     S2.SetActive(false);
+                    S3.SetActive(false);
+                    S4.SetActive(false);
                     count++;
                 }
                 if (count == 0)
@@ -847,6 +1082,8 @@ public class UI_conversation : MonoBehaviour
                     S0.SetActive(true);
                     S1.SetActive(false);
                     S2.SetActive(false);
+                    S3.SetActive(false);
+                    S4.SetActive(false);
                     count++;
                 }
             }
@@ -999,19 +1236,21 @@ public class UI_conversation : MonoBehaviour
             characDi.enabled = true;
             characDI.SetActive(true);
             //UI图片出现
-            GameObject S0, S1, S2;
+            GameObject S0, S1, S2, S3;
             S0 = characDI.transform.GetChild(0).GetChild(2).GetChild(0).gameObject;
             S1 = characDI.transform.GetChild(0).GetChild(2).GetChild(1).gameObject;
             S2 = characDI.transform.GetChild(0).GetChild(2).GetChild(2).gameObject;
+            S3 = characDI.transform.GetChild(0).GetChild(2).GetChild(3).gameObject;
             //获取三个会出现的对话
 
             if (Input.GetKeyDown(KeyCode.F))
             {
-                if (count >= 3)
+                if (count >= 4)
                 {
                     S0.SetActive(false);
                     S1.SetActive(false);
                     S2.SetActive(false);
+                    S3.SetActive(false);
                     characDi.enabled = false;
                     canInteract = false;
                     Time.timeScale = 1;
@@ -1026,11 +1265,20 @@ public class UI_conversation : MonoBehaviour
 
                     characDI.SetActive(false);
                 }
+                if (count == 3)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    S3.SetActive(true);
+                    count++;
+                }
                 if (count == 2)
                 {
                     S0.SetActive(false);
                     S1.SetActive(false);
                     S2.SetActive(true);
+                    S3.SetActive(false);
                     count++;
                 }
                 if (count == 1)
@@ -1038,6 +1286,7 @@ public class UI_conversation : MonoBehaviour
                     S0.SetActive(false);
                     S1.SetActive(true);
                     S2.SetActive(false);
+                    S3.SetActive(false);
                     count++;
                 }
                 if (count == 0)
@@ -1045,6 +1294,7 @@ public class UI_conversation : MonoBehaviour
                     S0.SetActive(true);
                     S1.SetActive(false);
                     S2.SetActive(false);
+                    S3.SetActive(false);
                     count++;
                 }
             }
@@ -1057,19 +1307,21 @@ public class UI_conversation : MonoBehaviour
             characDi.enabled = true;
             characDI.SetActive(true);
             //UI图片出现
-            GameObject S0, S1, S2;
+            GameObject S0, S1, S2, S3;
             S0 = characDI.transform.GetChild(0).GetChild(3).GetChild(0).gameObject;
             S1 = characDI.transform.GetChild(0).GetChild(3).GetChild(1).gameObject;
             S2 = characDI.transform.GetChild(0).GetChild(3).GetChild(2).gameObject;
+            S3 = characDI.transform.GetChild(0).GetChild(3).GetChild(3).gameObject;
             //获取三个会出现的对话
 
             if (Input.GetKeyDown(KeyCode.F))
             {
-                if (count >= 3)
+                if (count >= 4)
                 {
                     S0.SetActive(false);
                     S1.SetActive(false);
                     S2.SetActive(false);
+                    S3.SetActive(false);
                     characDi.enabled = false;
                     canInteract = false;
                     Time.timeScale = 1;
@@ -1084,11 +1336,20 @@ public class UI_conversation : MonoBehaviour
 
                     characDI.SetActive(false);
                 }
+                if (count == 3)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    S3.SetActive(true);
+                    count++;
+                }
                 if (count == 2)
                 {
                     S0.SetActive(false);
                     S1.SetActive(false);
                     S2.SetActive(true);
+                    S3.SetActive(false);
                     count++;
                 }
                 if (count == 1)
@@ -1096,6 +1357,7 @@ public class UI_conversation : MonoBehaviour
                     S0.SetActive(false);
                     S1.SetActive(true);
                     S2.SetActive(false);
+                    S3.SetActive(false);
                     count++;
                 }
                 if (count == 0)
@@ -1103,6 +1365,7 @@ public class UI_conversation : MonoBehaviour
                     S0.SetActive(true);
                     S1.SetActive(false);
                     S2.SetActive(false);
+                    S3.SetActive(false);
                     count++;
                 }
             }
@@ -1310,18 +1573,22 @@ public class UI_conversation : MonoBehaviour
             characEi.enabled = true;
             characEI.SetActive(true);
             //UI图片出现
-            GameObject S0, S1, S2;
+            GameObject S0, S1, S2, S3, S4;
             S0 = characEI.transform.GetChild(0).GetChild(3).GetChild(0).gameObject;
             S1 = characEI.transform.GetChild(0).GetChild(3).GetChild(1).gameObject;
             S2 = characEI.transform.GetChild(0).GetChild(3).GetChild(2).gameObject;
+            S3 = characEI.transform.GetChild(0).GetChild(3).GetChild(3).gameObject;
+            S4 = characEI.transform.GetChild(0).GetChild(3).GetChild(4).gameObject;
 
             if (Input.GetKeyDown(KeyCode.F))
             {
-                if (count >= 3)
+                if (count >= 5)
                 {
                     S0.SetActive(false);
                     S1.SetActive(false);
                     S2.SetActive(false);
+                    S3.SetActive(false);
+                    S4.SetActive(false);
                     characEi.enabled = false;
                     canInteract = false;
                     Time.timeScale = 1;
@@ -1336,11 +1603,31 @@ public class UI_conversation : MonoBehaviour
 
                     characEI.SetActive(false);
                 }
+                if (count == 4)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    S3.SetActive(false);
+                    S4.SetActive(true);
+                    count++;
+                }
+                if (count == 3)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    S3.SetActive(true);
+                    S4.SetActive(false);
+                    count++;
+                }
                 if (count == 2)
                 {
                     S0.SetActive(false);
                     S1.SetActive(false);
                     S2.SetActive(true);
+                    S3.SetActive(false);
+                    S4.SetActive(false);
                     count++;
                 }
                 if (count == 1)
@@ -1348,6 +1635,8 @@ public class UI_conversation : MonoBehaviour
                     S0.SetActive(false);
                     S1.SetActive(true);
                     S2.SetActive(false);
+                    S3.SetActive(false);
+                    S4.SetActive(false);
                     count++;
                 }
                 if (count == 0)
@@ -1355,6 +1644,8 @@ public class UI_conversation : MonoBehaviour
                     S0.SetActive(true);
                     S1.SetActive(false);
                     S2.SetActive(false);
+                    S3.SetActive(false);
+                    S4.SetActive(false);
                     count++;
                 }
             }
