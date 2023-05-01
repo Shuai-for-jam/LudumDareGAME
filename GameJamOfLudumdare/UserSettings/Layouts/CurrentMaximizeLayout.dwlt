@@ -25,7 +25,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 41584
+  controlID: 119
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -88,7 +88,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 41585
+  controlID: 120
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 41558
+  controlID: 121
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -226,10 +226,10 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 5546.6665}
+      scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: bab1f6ffbcb1f6ffc8b1f6ff1418f7ffa83df7ff1a48f7ffb649f7ff2c33fcff3833fcff3a33fcff34fbffff306a0000c88e0000d08e000060ae000098c30000eec3000024c4000056e50000
+      m_ExpandedIDs: aaa1ffff76c9ffff9abb0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -551,9 +551,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -19.306213, y: -4.034045, z: 3.0463858}
+    m_Target: {x: 5.645626, y: 14.701893, z: 2.1253853}
     speed: 2
-    m_Value: {x: -19.306213, y: -4.034045, z: 3.0463858}
+    m_Value: {x: 5.645626, y: 14.701893, z: 2.1253853}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -600,13 +600,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.20785351, y: 0.7659918, z: 0.28957883, w: 0.5358893}
+    m_Target: {x: -0.317926, y: -0.28508624, z: 0.111379504, w: -0.89821464}
     speed: 2
-    m_Value: {x: -0.20785351, y: 0.7659918, z: 0.28957883, w: 0.5358893}
+    m_Value: {x: -0.3176805, y: -0.28486612, z: 0.11129351, w: -0.89752114}
   m_Size:
-    m_Target: 51.73414
+    m_Target: 47.869373
     speed: 2
-    m_Value: 51.73414
+    m_Value: 47.869373
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -751,7 +751,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 41586
+  controlID: 52
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -880,22 +880,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Plugins/Z ! Low Poly Nature Pack/Prefabs
+    - Assets/Scenes/MainGameSecne
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 60
   m_LastFolders:
-  - Assets/Plugins/Z ! Low Poly Nature Pack/Prefabs
+  - Assets/Scenes/MainGameSecne
   m_LastFoldersGridSize: 60
   m_LastProjectPath: C:\Users\Zhangzonshuai\Documents\GitHub\LudumDareGAME\GameJamOfLudumdare
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 202.33331}
-    m_SelectedIDs: 02910000
-    m_LastClickedID: 37122
-    m_ExpandedIDs: 00000000e86a0000ea6a0000d26c0000086d000000ca9a3b
+    scrollPos: {x: 0, y: 14.333313}
+    m_SelectedIDs: 56ba0000
+    m_LastClickedID: 47702
+    m_ExpandedIDs: 000000005eb7000060b7000060b9000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -923,7 +923,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e86a0000ea6a000000ca9a3b
+    m_ExpandedIDs: 000000005eb7000060b70000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -950,7 +950,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -967,7 +967,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 14}
+      m_ClientGUIView: {fileID: 7}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -975,7 +975,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 322}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 60
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 185
@@ -1032,7 +1032,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 41718
+  controlID: 137
 --- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1043,7 +1043,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: PolybrushEditor
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -1051,15 +1051,15 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 276.66663
-    height: 738.6667
-  m_MinSize: {x: 321, y: 201}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 20}
+    height: 713.3333
+  m_MinSize: {x: 232, y: 271}
+  m_MaxSize: {x: 10002, y: 10021}
+  m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
   - {fileID: 20}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1084,7 +1084,7 @@ MonoBehaviour:
     x: 1172
     y: 72.66667
     width: 274.66663
-    height: 717.6667
+    height: 692.3333
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1102,22 +1102,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Plugins/LowPolyAssets/SimpleLowPolyNature/Prefabs
+    - Assets/Scenes/MainGameSecne
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Plugins/LowPolyAssets/SimpleLowPolyNature/Prefabs
+  - Assets/Scenes/MainGameSecne
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Zhangzonshuai\Documents\GitHub\LudumDareGAME\GameJamOfLudumdare
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ee6c0000
-    m_LastClickedID: 27886
-    m_ExpandedIDs: 00000000e86a0000ea6a000000ca9a3b
+    m_SelectedIDs: 56ba0000
+    m_LastClickedID: 47702
+    m_ExpandedIDs: 000000005eb7000060b700005cb9000060b900008cb900008eb9000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1145,7 +1145,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e86a0000ea6a000000ca9a3b
+    m_ExpandedIDs: 000000005eb7000060b70000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1170,8 +1170,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 726d0000
-    m_LastClickedInstanceID: 28018
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
@@ -1197,7 +1197,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 225.33331}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 16
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 131
@@ -1224,12 +1224,16 @@ MonoBehaviour:
     x: 1172
     y: 72.66667
     width: 274.66663
-    height: 717.6667
+    height: 692.3333
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   modes:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -1258,11 +1262,11 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 738.6667
+    y: 713.3333
     width: 276.66663
-    height: 187.33331
-  m_MinSize: {x: 276, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+    height: 212.66669
+  m_MinSize: {x: 275, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 22}
   m_Panes:
   - {fileID: 22}
@@ -1290,9 +1294,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 1172
-    y: 811.3334
+    y: 786
     width: 274.66663
-    height: 166.33331
+    height: 191.66669
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1329,8 +1333,8 @@ MonoBehaviour:
     y: 0
     width: 258
     height: 926
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 24}
   m_Panes:
   - {fileID: 24}
