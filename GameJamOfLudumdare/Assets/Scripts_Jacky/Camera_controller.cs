@@ -34,7 +34,6 @@ public class Camera_controller : MonoBehaviour
         {
             transform.Translate(new Vector3(0, -2, -481).normalized * Time.deltaTime * speed_c);
         }
-        Debug.Log(Input.mouseScrollDelta.y);
         //if (Input.mouseScrollDelta.y>0)
         //{
         //    transform.Translate(-new Vector3(0, -2, -481).normalized * Time.deltaTime * speed_c);
