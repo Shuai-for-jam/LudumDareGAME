@@ -27,7 +27,7 @@ public class UI_conversation : MonoBehaviour
     void Start()
     {
         //audioS = GetComponent<AudioSource>();
-        //audioSB = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>();
+        audioSB = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>();
         //audioS.volume = 0;
 
         characAi = characAI.GetComponent<Image>();
@@ -1360,6 +1360,20 @@ public class UI_conversation : MonoBehaviour
             }
             //非常屎山的对话系统，确保文字能够按顺序播放，目前还不可逆
         }
+        //if (canInteract == true && Vector3.Distance(transform.position, characE.transform.position) <= distance && isE == true)
+        //{
+        //    canInteract = false;
+        //    Time.timeScale = 1;
+        //    count = -1;
+
+        //    isA = false;
+        //    isB = false;
+        //    isC = false;
+        //    isD = false;
+        //    isE = true;
+
+        //    characEI.SetActive(false);
+        //}
     }
     public void RightPanelCheck()
     {
