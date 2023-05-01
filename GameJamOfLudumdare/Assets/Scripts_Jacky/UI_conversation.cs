@@ -20,8 +20,9 @@ public class UI_conversation : MonoBehaviour
     float rate = 0.001f;
 
     public bool isA, isB, isC, isD, isE;//判断到底是哪一个对话打开了
-    public Image leftcol, rightcol;
+    public GameObject leftcol, rightcol;
 
+    public GameObject AQ, BQ, CQ, DQ, EQ;
 
     void Start()
     {
@@ -44,11 +45,12 @@ public class UI_conversation : MonoBehaviour
 
     void Update()
     {
-        CA();
+        //CA();
         //CB();
         //CC();
         //CD();
-        //CE();
+        CE();
+        RightPanelCheck();
         //if (decVolume == true)
         //{
         //    audioSB.volume -= rate;
@@ -80,7 +82,7 @@ public class UI_conversation : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 canInteract = true;
-
+                rightcol.SetActive(false);
                 //decVolume = true;
                 //audioS.clip = characAmusic;
                 //audioS.Play();
@@ -92,25 +94,22 @@ public class UI_conversation : MonoBehaviour
         {
             characA.SetActive(false);
             count = 0;
+            rightcol.SetActive(true);
         }
         //距离大于定值，感叹号（characA）不出现
 
         if (canInteract == true && Vector3.Distance(transform.position, characA.transform.position) <= distance && isB == true)//这里是B对A
         {
-            Debug.Log("111");
             Time.timeScale = 0f;
             //先使时间暂停
             characAi.enabled = true;
+            characAI.SetActive(true);
             //UI图片出现
 
-            leftcol.enabled = false;
-            rightcol.enabled = false;
-            //两侧控制面板，记得改！！！！
-
             GameObject S0, S1, S2;
-            S0 = characAI.transform.GetChild(0).GetChild(0).gameObject;
-            S1 = characAI.transform.GetChild(0).GetChild(1).gameObject;
-            S2 = characAI.transform.GetChild(0).GetChild(2).gameObject;
+            S0 = characAI.transform.GetChild(0).GetChild(0).GetChild(0).gameObject;
+            S1 = characAI.transform.GetChild(0).GetChild(0).GetChild(1).gameObject;
+            S2 = characAI.transform.GetChild(0).GetChild(0).GetChild(2).gameObject;
             //获取三个会出现的对话
 
             //if (Input.GetKeyDown(KeyCode.F))//若此处改成Q，会和前面的Q起冲突
@@ -140,10 +139,7 @@ public class UI_conversation : MonoBehaviour
                     isD = false;
                     isE = false;
                     //和A交互完，获得A的信息，使其他bool都为false，保证同一时间仅有一个bool打开
-
-                    leftcol.enabled = true;
-                    rightcol.enabled = true;
-                    //两侧控制面板，记得改！！！
+                    characAI.SetActive(false);
                 }
                 if (count == 2)
                 {
@@ -175,14 +171,13 @@ public class UI_conversation : MonoBehaviour
             Time.timeScale = 0f;
             //先使时间暂停
             characAi.enabled = true;
+            characAI.SetActive(true);
             //UI图片出现
-            leftcol.enabled = false;
-            rightcol.enabled = false;
-            //两侧控制面板，记得改！！！！
+
             GameObject S0, S1, S2;
-            S0 = characAI.transform.GetChild(1).GetChild(0).gameObject;
-            S1 = characAI.transform.GetChild(1).GetChild(1).gameObject;
-            S2 = characAI.transform.GetChild(1).GetChild(2).gameObject;
+            S0 = characAI.transform.GetChild(0).GetChild(1).GetChild(0).gameObject;
+            S1 = characAI.transform.GetChild(0).GetChild(1).GetChild(1).gameObject;
+            S2 = characAI.transform.GetChild(0).GetChild(1).GetChild(2).gameObject;
             //获取三个会出现的对话
 
             if (Input.GetKeyDown(KeyCode.F))
@@ -205,9 +200,7 @@ public class UI_conversation : MonoBehaviour
                     isD = false;
                     isE = false;
 
-                    leftcol.enabled = true;
-                    rightcol.enabled = true;
-                    //两侧控制面板，记得改！！！
+                    characAI.SetActive(false);
                 }
                 if (count == 2)
                 {
@@ -237,14 +230,13 @@ public class UI_conversation : MonoBehaviour
             Time.timeScale = 0f;
             //先使时间暂停
             characAi.enabled = true;
+            characAI.SetActive(true);
             //UI图片出现
-            leftcol.enabled = false;
-            rightcol.enabled = false;
-            //两侧控制面板，记得改！！！！
+
             GameObject S0, S1, S2;
-            S0 = characAI.transform.GetChild(2).GetChild(0).gameObject;
-            S1 = characAI.transform.GetChild(2).GetChild(1).gameObject;
-            S2 = characAI.transform.GetChild(2).GetChild(2).gameObject;
+            S0 = characAI.transform.GetChild(0).GetChild(2).GetChild(0).gameObject;
+            S1 = characAI.transform.GetChild(0).GetChild(2).GetChild(1).gameObject;
+            S2 = characAI.transform.GetChild(0).GetChild(2).GetChild(2).gameObject;
             //获取三个会出现的对话
 
             if (Input.GetKeyDown(KeyCode.F))
@@ -267,9 +259,7 @@ public class UI_conversation : MonoBehaviour
                     isD = false;
                     isE = false;
 
-                    leftcol.enabled = true;
-                    rightcol.enabled = true;
-                    //两侧控制面板，记得改！！！
+                    characAI.SetActive(false);
                 }
                 if (count == 2)
                 {
@@ -299,14 +289,13 @@ public class UI_conversation : MonoBehaviour
             Time.timeScale = 0f;
             //先使时间暂停
             characAi.enabled = true;
+            characAI.SetActive(true);
             //UI图片出现
-            leftcol.enabled = false;
-            rightcol.enabled = false;
-            //两侧控制面板，记得改！！！！
+
             GameObject S0, S1, S2;
-            S0 = characAI.transform.GetChild(3).GetChild(0).gameObject;
-            S1 = characAI.transform.GetChild(3).GetChild(1).gameObject;
-            S2 = characAI.transform.GetChild(3).GetChild(2).gameObject;
+            S0 = characAI.transform.GetChild(0).GetChild(3).GetChild(0).gameObject;
+            S1 = characAI.transform.GetChild(0).GetChild(3).GetChild(1).gameObject;
+            S2 = characAI.transform.GetChild(0).GetChild(3).GetChild(2).gameObject;
             //获取三个会出现的对话
 
             if (Input.GetKeyDown(KeyCode.F))
@@ -329,9 +318,7 @@ public class UI_conversation : MonoBehaviour
                     isD = false;
                     isE = false;
 
-                    leftcol.enabled = true;
-                    rightcol.enabled = true;
-                    //两侧控制面板，记得改！！！
+                    characAI.SetActive(false);
                 }
                 if (count == 2)
                 {
@@ -365,7 +352,7 @@ public class UI_conversation : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 canInteract = true;
-
+                rightcol.SetActive(false);
                 //decVolume = true;
                 //audioS.clip = characAmusic;//可以更改播放的音频，总计分两种
                 //audioS.Play();
@@ -376,6 +363,7 @@ public class UI_conversation : MonoBehaviour
         {
             characB.SetActive(false);
             count = 0;
+            rightcol.SetActive(true);
         }
         //距离大于定值，感叹号（characA）不出现
 
@@ -384,15 +372,13 @@ public class UI_conversation : MonoBehaviour
             Time.timeScale = 0f;
             //先使时间暂停
             characBi.enabled = true;
+            characBI.SetActive(true);
             //UI图片出现
-            leftcol.enabled = false;
-            rightcol.enabled = false;
-            //两侧控制面板，记得改！！！！
 
             GameObject S0, S1, S2;
-            S0 = characBI.transform.GetChild(0).GetChild(0).gameObject;
-            S1 = characBI.transform.GetChild(0).GetChild(1).gameObject;
-            S2 = characBI.transform.GetChild(0).GetChild(2).gameObject;
+            S0 = characBI.transform.GetChild(0).GetChild(0).GetChild(0).gameObject;
+            S1 = characBI.transform.GetChild(0).GetChild(0).GetChild(1).gameObject;
+            S2 = characBI.transform.GetChild(0).GetChild(0).GetChild(2).gameObject;
             //获取三个会出现的对话
 
             if (Input.GetKeyDown(KeyCode.F))
@@ -414,9 +400,7 @@ public class UI_conversation : MonoBehaviour
                     isD = false;
                     isE = false;
 
-                    leftcol.enabled = true;
-                    rightcol.enabled = true;
-                    //两侧控制面板，记得改！！！
+                    characBI.SetActive(false);
                 }
                 if (count == 2)
                 {
@@ -446,14 +430,12 @@ public class UI_conversation : MonoBehaviour
             Time.timeScale = 0f;
             //先使时间暂停
             characBi.enabled = true;
+            characBI.SetActive(true);
             //UI图片出现
-            leftcol.enabled = false;
-            rightcol.enabled = false;
-            //两侧控制面板，记得改！！！！
             GameObject S0, S1, S2;
-            S0 = characBI.transform.GetChild(1).GetChild(0).gameObject;
-            S1 = characBI.transform.GetChild(1).GetChild(1).gameObject;
-            S2 = characBI.transform.GetChild(1).GetChild(2).gameObject;
+            S0 = characBI.transform.GetChild(0).GetChild(1).GetChild(0).gameObject;
+            S1 = characBI.transform.GetChild(0).GetChild(1).GetChild(1).gameObject;
+            S2 = characBI.transform.GetChild(0).GetChild(1).GetChild(2).gameObject;
             //获取三个会出现的对话
 
             if (Input.GetKeyDown(KeyCode.F))
@@ -475,9 +457,7 @@ public class UI_conversation : MonoBehaviour
                     isD = false;
                     isE = false;
 
-                    leftcol.enabled = true;
-                    rightcol.enabled = true;
-                    //两侧控制面板，记得改！！！
+                    characBI.SetActive(false);
                 }
                 if (count == 2)
                 {
@@ -507,14 +487,12 @@ public class UI_conversation : MonoBehaviour
             Time.timeScale = 0f;
             //先使时间暂停
             characBi.enabled = true;
+            characBI.SetActive(true);
             //UI图片出现
-            leftcol.enabled = false;
-            rightcol.enabled = false;
-            //两侧控制面板，记得改！！！！
             GameObject S0, S1, S2;
-            S0 = characBI.transform.GetChild(2).GetChild(0).gameObject;
-            S1 = characBI.transform.GetChild(2).GetChild(1).gameObject;
-            S2 = characBI.transform.GetChild(2).GetChild(2).gameObject;
+            S0 = characBI.transform.GetChild(0).GetChild(2).GetChild(0).gameObject;
+            S1 = characBI.transform.GetChild(0).GetChild(2).GetChild(1).gameObject;
+            S2 = characBI.transform.GetChild(0).GetChild(2).GetChild(2).gameObject;
             //获取三个会出现的对话
 
             if (Input.GetKeyDown(KeyCode.F))
@@ -536,9 +514,7 @@ public class UI_conversation : MonoBehaviour
                     isD = false;
                     isE = false;
 
-                    leftcol.enabled = true;
-                    rightcol.enabled = true;
-                    //两侧控制面板，记得改！！！
+                    characBI.SetActive(false);
                 }
                 if (count == 2)
                 {
@@ -568,14 +544,12 @@ public class UI_conversation : MonoBehaviour
             Time.timeScale = 0f;
             //先使时间暂停
             characBi.enabled = true;
+            characBI.SetActive(true);
             //UI图片出现
-            leftcol.enabled = false;
-            rightcol.enabled = false;
-            //两侧控制面板，记得改！！！！
             GameObject S0, S1, S2;
-            S0 = characBI.transform.GetChild(3).GetChild(0).gameObject;
-            S1 = characBI.transform.GetChild(3).GetChild(1).gameObject;
-            S2 = characBI.transform.GetChild(3).GetChild(2).gameObject;
+            S0 = characBI.transform.GetChild(0).GetChild(3).GetChild(0).gameObject;
+            S1 = characBI.transform.GetChild(0).GetChild(3).GetChild(1).gameObject;
+            S2 = characBI.transform.GetChild(0).GetChild(3).GetChild(2).gameObject;
             //获取三个会出现的对话
 
             if (Input.GetKeyDown(KeyCode.F))
@@ -597,9 +571,7 @@ public class UI_conversation : MonoBehaviour
                     isD = false;
                     isE = false;
 
-                    leftcol.enabled = true;
-                    rightcol.enabled = true;
-                    //两侧控制面板，记得改！！！
+                    characBI.SetActive(false);
                 }
                 if (count == 2)
                 {
@@ -625,729 +597,811 @@ public class UI_conversation : MonoBehaviour
             }
         }
     }
-    //public void CC()
-    //{
-    //    if (Vector3.Distance(transform.position, characC.transform.position) <= distance && canInteract == false)
-    //    {
-    //        characC.SetActive(true);
-    //        if (Input.GetKeyDown(KeyCode.Q))
-    //        {
-    //            canInteract = true;
+    public void CC()
+    {
+        if (Vector3.Distance(transform.position, characC.transform.position) <= distance && canInteract == false)
+        {
+            characC.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                canInteract = true;
+                rightcol.SetActive(false);
+                //decVolume = true;
+                //audioS.clip = characAmusic;//可以更改播放的音频，总计分两种
+                //audioS.Play();
+            }
+        }
+        //瓶子和角色距离小于定值的时候，使角色头上的感叹号（characA）出现，此时若按下Q，可对UI进行操控
+        if (Vector3.Distance(transform.position, characC.transform.position) > distance && canInteract == false)
+        {
+            characC.SetActive(false);
+            count = 0;
+            rightcol.SetActive(true);
+        }
+        //距离大于定值，感叹号（characA）不出现
 
-    //            decVolume = true;
-    //            audioS.clip = characAmusic;//可以更改播放的音频，总计分两种
-    //            audioS.Play();
-    //        }
-    //    }
-    //    //瓶子和角色距离小于定值的时候，使角色头上的感叹号（characA）出现，此时若按下Q，可对UI进行操控
-    //    if (Vector3.Distance(transform.position, characC.transform.position) > distance && canInteract == false)
-    //    {
-    //        characC.SetActive(false);
-    //        count = 0;
-    //    }
-    //    //距离大于定值，感叹号（characA）不出现
+        if (canInteract == true && Vector3.Distance(transform.position, characC.transform.position) <= distance && isA == true)
+        {
+            Time.timeScale = 0f;
+            //先使时间暂停
+            characCi.enabled = true;
+            characCI.SetActive(true);
+            //UI图片出现
+            GameObject S0, S1, S2;
+            S0 = characCI.transform.GetChild(0).GetChild(0).GetChild(0).gameObject;
+            S1 = characCI.transform.GetChild(0).GetChild(0).GetChild(1).gameObject;
+            S2 = characCI.transform.GetChild(0).GetChild(0).GetChild(2).gameObject;
+            //获取三个会出现的对话
 
-    //    if (canInteract == true && Vector3.Distance(transform.position, characC.transform.position) <= distance && isA == true)
-    //    {
-    //        Time.timeScale = 0f;
-    //        //先使时间暂停
-    //        characCi.enabled = true;
-    //        //UI图片出现
-    //        GameObject S0, S1, S2;
-    //        S0 = characCI.transform.GetChild(0).GetChild(0).gameObject;
-    //        S1 = characCI.transform.GetChild(0).GetChild(1).gameObject;
-    //        S2 = characCI.transform.GetChild(0).GetChild(2).gameObject;
-    //        //获取三个会出现的对话
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                if (count >= 3)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    characCi.enabled = false;
+                    canInteract = false;
+                    Time.timeScale = 1;
+                    count = -1;
+                    incVolume = true;
 
-    //        if (Input.GetKeyDown(KeyCode.F))
-    //        {
-    //            if (count >= 3)
-    //            {
-    //                S0.SetActive(false);
-    //                S1.SetActive(false);
-    //                S2.SetActive(false);
-    //                characCi.enabled = false;
-    //                canInteract = false;
-    //                Time.timeScale = 1;
-    //                count = -1;
-    //                incVolume = true;
+                    isA = false;
+                    isB = false;
+                    isC = true;
+                    isD = false;
+                    isE = false;
 
-    //                isA = false;
-    //                isB = false;
-    //                isC = true;
-    //                isD = false;
-    //                isE = false;
-    //            }
-    //            if (count == 2)
-    //            {
-    //                S0.SetActive(false);
-    //                S1.SetActive(false);
-    //                S2.SetActive(true);
-    //                count++;
-    //            }
-    //            if (count == 1)
-    //            {
-    //                S0.SetActive(false);
-    //                S1.SetActive(true);
-    //                S2.SetActive(false);
-    //                count++;
-    //            }
-    //            if (count == 0)
-    //            {
-    //                S0.SetActive(true);
-    //                S1.SetActive(false);
-    //                S2.SetActive(false);
-    //                count++;
-    //            }
-    //        }
-    //        //非常屎山的对话系统，确保文字能够按顺序播放，目前还不可逆
-    //    }
-    //    if (canInteract == true && Vector3.Distance(transform.position, characC.transform.position) <= distance && isB == true)
-    //    {
-    //        Time.timeScale = 0f;
-    //        //先使时间暂停
-    //        characCi.enabled = true;
-    //        //UI图片出现
-    //        GameObject S0, S1, S2;
-    //        S0 = characCI.transform.GetChild(1).GetChild(0).gameObject;
-    //        S1 = characCI.transform.GetChild(1).GetChild(1).gameObject;
-    //        S2 = characCI.transform.GetChild(1).GetChild(2).gameObject;
-    //        //获取三个会出现的对话
+                    characCI.SetActive(false);
+                }
+                if (count == 2)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(true);
+                    count++;
+                }
+                if (count == 1)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(true);
+                    S2.SetActive(false);
+                    count++;
+                }
+                if (count == 0)
+                {
+                    S0.SetActive(true);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    count++;
+                }
+            }
+            //非常屎山的对话系统，确保文字能够按顺序播放，目前还不可逆
+        }
+        if (canInteract == true && Vector3.Distance(transform.position, characC.transform.position) <= distance && isB == true)
+        {
+            Time.timeScale = 0f;
+            //先使时间暂停
+            characCi.enabled = true;
+            characCI.SetActive(true);
+            //UI图片出现
+            GameObject S0, S1, S2;
+            S0 = characCI.transform.GetChild(0).GetChild(1).GetChild(0).gameObject;
+            S1 = characCI.transform.GetChild(0).GetChild(1).GetChild(1).gameObject;
+            S2 = characCI.transform.GetChild(0).GetChild(1).GetChild(2).gameObject;
+            //获取三个会出现的对话
 
-    //        if (Input.GetKeyDown(KeyCode.F))
-    //        {
-    //            if (count >= 3)
-    //            {
-    //                S0.SetActive(false);
-    //                S1.SetActive(false);
-    //                S2.SetActive(false);
-    //                characCi.enabled = false;
-    //                canInteract = false;
-    //                Time.timeScale = 1;
-    //                count = -1;
-    //                incVolume = true;
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                if (count >= 3)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    characCi.enabled = false;
+                    canInteract = false;
+                    Time.timeScale = 1;
+                    count = -1;
+                    incVolume = true;
 
-    //                isA = false;
-    //                isB = false;
-    //                isC = true;
-    //                isD = false;
-    //                isE = false;
-    //            }
-    //            if (count == 2)
-    //            {
-    //                S0.SetActive(false);
-    //                S1.SetActive(false);
-    //                S2.SetActive(true);
-    //                count++;
-    //            }
-    //            if (count == 1)
-    //            {
-    //                S0.SetActive(false);
-    //                S1.SetActive(true);
-    //                S2.SetActive(false);
-    //                count++;
-    //            }
-    //            if (count == 0)
-    //            {
-    //                S0.SetActive(true);
-    //                S1.SetActive(false);
-    //                S2.SetActive(false);
-    //                count++;
-    //            }
-    //        }
-    //        //非常屎山的对话系统，确保文字能够按顺序播放，目前还不可逆
-    //    }
-    //    if (canInteract == true && Vector3.Distance(transform.position, characC.transform.position) <= distance && isD == true)
-    //    {
-    //        Time.timeScale = 0f;
-    //        //先使时间暂停
-    //        characCi.enabled = true;
-    //        //UI图片出现
-    //        GameObject S0, S1, S2;
-    //        S0 = characCI.transform.GetChild(2).GetChild(0).gameObject;
-    //        S1 = characCI.transform.GetChild(2).GetChild(1).gameObject;
-    //        S2 = characCI.transform.GetChild(2).GetChild(2).gameObject;
-    //        //获取三个会出现的对话
+                    isA = false;
+                    isB = false;
+                    isC = true;
+                    isD = false;
+                    isE = false;
 
-    //        if (Input.GetKeyDown(KeyCode.F))
-    //        {
-    //            if (count >= 3)
-    //            {
-    //                S0.SetActive(false);
-    //                S1.SetActive(false);
-    //                S2.SetActive(false);
-    //                characCi.enabled = false;
-    //                canInteract = false;
-    //                Time.timeScale = 1;
-    //                count = -1;
-    //                incVolume = true;
+                    characCI.SetActive(false);
+                }
+                if (count == 2)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(true);
+                    count++;
+                }
+                if (count == 1)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(true);
+                    S2.SetActive(false);
+                    count++;
+                }
+                if (count == 0)
+                {
+                    S0.SetActive(true);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    count++;
+                }
+            }
+            //非常屎山的对话系统，确保文字能够按顺序播放，目前还不可逆
+        }
+        if (canInteract == true && Vector3.Distance(transform.position, characC.transform.position) <= distance && isD == true)
+        {
+            Time.timeScale = 0f;
+            //先使时间暂停
+            characCi.enabled = true;
+            characCI.SetActive(true);
+            //UI图片出现
+            GameObject S0, S1, S2;
+            S0 = characCI.transform.GetChild(0).GetChild(2).GetChild(0).gameObject;
+            S1 = characCI.transform.GetChild(0).GetChild(2).GetChild(1).gameObject;
+            S2 = characCI.transform.GetChild(0).GetChild(2).GetChild(2).gameObject;
+            //获取三个会出现的对话
 
-    //                isA = false;
-    //                isB = false;
-    //                isC = true;
-    //                isD = false;
-    //                isE = false;
-    //            }
-    //            if (count == 2)
-    //            {
-    //                S0.SetActive(false);
-    //                S1.SetActive(false);
-    //                S2.SetActive(true);
-    //                count++;
-    //            }
-    //            if (count == 1)
-    //            {
-    //                S0.SetActive(false);
-    //                S1.SetActive(true);
-    //                S2.SetActive(false);
-    //                count++;
-    //            }
-    //            if (count == 0)
-    //            {
-    //                S0.SetActive(true);
-    //                S1.SetActive(false);
-    //                S2.SetActive(false);
-    //                count++;
-    //            }
-    //        }
-    //        //非常屎山的对话系统，确保文字能够按顺序播放，目前还不可逆
-    //    }
-    //    if (canInteract == true && Vector3.Distance(transform.position, characC.transform.position) <= distance && isE == true)
-    //    {
-    //        Time.timeScale = 0f;
-    //        //先使时间暂停
-    //        characCi.enabled = true;
-    //        //UI图片出现
-    //        GameObject S0, S1, S2;
-    //        S0 = characCI.transform.GetChild(3).GetChild(0).gameObject;
-    //        S1 = characCI.transform.GetChild(3).GetChild(1).gameObject;
-    //        S2 = characCI.transform.GetChild(3).GetChild(2).gameObject;
-    //        //获取三个会出现的对话
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                if (count >= 3)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    characCi.enabled = false;
+                    canInteract = false;
+                    Time.timeScale = 1;
+                    count = -1;
+                    incVolume = true;
 
-    //        if (Input.GetKeyDown(KeyCode.F))
-    //        {
-    //            if (count >= 3)
-    //            {
-    //                S0.SetActive(false);
-    //                S1.SetActive(false);
-    //                S2.SetActive(false);
-    //                characCi.enabled = false;
-    //                canInteract = false;
-    //                Time.timeScale = 1;
-    //                count = -1;
-    //                incVolume = true;
+                    isA = false;
+                    isB = false;
+                    isC = true;
+                    isD = false;
+                    isE = false;
 
-    //                isA = false;
-    //                isB = false;
-    //                isC = true;
-    //                isD = false;
-    //                isE = false;
-    //            }
-    //            if (count == 2)
-    //            {
-    //                S0.SetActive(false);
-    //                S1.SetActive(false);
-    //                S2.SetActive(true);
-    //                count++;
-    //            }
-    //            if (count == 1)
-    //            {
-    //                S0.SetActive(false);
-    //                S1.SetActive(true);
-    //                S2.SetActive(false);
-    //                count++;
-    //            }
-    //            if (count == 0)
-    //            {
-    //                S0.SetActive(true);
-    //                S1.SetActive(false);
-    //                S2.SetActive(false);
-    //                count++;
-    //            }
-    //        }
-    //        //非常屎山的对话系统，确保文字能够按顺序播放，目前还不可逆
-    //    }
-    //}
-    //public void CD()
-    //{
-    //    if (Vector3.Distance(transform.position, characD.transform.position) <= distance && canInteract == false)
-    //    {
-    //        characD.SetActive(true);
-    //        if (Input.GetKeyDown(KeyCode.Q))
-    //        {
-    //            canInteract = true;
+                    characCI.SetActive(false);
+                }
+                if (count == 2)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(true);
+                    count++;
+                }
+                if (count == 1)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(true);
+                    S2.SetActive(false);
+                    count++;
+                }
+                if (count == 0)
+                {
+                    S0.SetActive(true);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    count++;
+                }
+            }
+            //非常屎山的对话系统，确保文字能够按顺序播放，目前还不可逆
+        }
+        if (canInteract == true && Vector3.Distance(transform.position, characC.transform.position) <= distance && isE == true)
+        {
+            Time.timeScale = 0f;
+            //先使时间暂停
+            characCi.enabled = true;
+            characCI.SetActive(true);
+            //UI图片出现
+            GameObject S0, S1, S2;
+            S0 = characCI.transform.GetChild(0).GetChild(3).GetChild(0).gameObject;
+            S1 = characCI.transform.GetChild(0).GetChild(3).GetChild(1).gameObject;
+            S2 = characCI.transform.GetChild(0).GetChild(3).GetChild(2).gameObject;
+            //获取三个会出现的对话
 
-    //            decVolume = true;
-    //            audioS.clip = characAmusic;//可以更改播放的音频，总计分两种
-    //            audioS.Play();
-    //        }
-    //    }
-    //    //瓶子和角色距离小于定值的时候，使角色头上的感叹号（characA）出现，此时若按下Q，可对UI进行操控
-    //    if (Vector3.Distance(transform.position, characD.transform.position) > distance && canInteract == false)
-    //    {
-    //        characD.SetActive(false);
-    //        count = 0;
-    //    }
-    //    //距离大于定值，感叹号（characA）不出现
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                if (count >= 3)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    characCi.enabled = false;
+                    canInteract = false;
+                    Time.timeScale = 1;
+                    count = -1;
+                    incVolume = true;
 
-    //    if (canInteract == true && Vector3.Distance(transform.position, characD.transform.position) <= distance && isA == true)
-    //    {
-    //        Time.timeScale = 0f;
-    //        //先使时间暂停
-    //        characDi.enabled = true;
-    //        //UI图片出现
-    //        GameObject S0, S1, S2;
-    //        S0 = characDI.transform.GetChild(0).GetChild(0).gameObject;
-    //        S1 = characDI.transform.GetChild(0).GetChild(1).gameObject;
-    //        S2 = characDI.transform.GetChild(0).GetChild(2).gameObject;
-    //        //获取三个会出现的对话
+                    isA = false;
+                    isB = false;
+                    isC = true;
+                    isD = false;
+                    isE = false;
 
-    //        if (Input.GetKeyDown(KeyCode.F))
-    //        {
-    //            if (count >= 3)
-    //            {
-    //                S0.SetActive(false);
-    //                S1.SetActive(false);
-    //                S2.SetActive(false);
-    //                characDi.enabled = false;
-    //                canInteract = false;
-    //                Time.timeScale = 1;
-    //                count = -1;
-    //                incVolume = true;
+                    characCI.SetActive(false);
+                }
+                if (count == 2)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(true);
+                    count++;
+                }
+                if (count == 1)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(true);
+                    S2.SetActive(false);
+                    count++;
+                }
+                if (count == 0)
+                {
+                    S0.SetActive(true);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    count++;
+                }
+            }
+            //非常屎山的对话系统，确保文字能够按顺序播放，目前还不可逆
+        }
+    }
+    public void CD()
+    {
+        if (Vector3.Distance(transform.position, characD.transform.position) <= distance && canInteract == false)
+        {
+            characD.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                canInteract = true;
+                rightcol.SetActive(false);
+                //decVolume = true;
+                //audioS.clip = characAmusic;//可以更改播放的音频，总计分两种
+                //audioS.Play();
+            }
+        }
+        //瓶子和角色距离小于定值的时候，使角色头上的感叹号（characA）出现，此时若按下Q，可对UI进行操控
+        if (Vector3.Distance(transform.position, characD.transform.position) > distance && canInteract == false)
+        {
+            characD.SetActive(false);
+            count = 0;
+            rightcol.SetActive(true);
+        }
+        //距离大于定值，感叹号（characA）不出现
 
-    //                isA = false;
-    //                isB = false;
-    //                isC = false;
-    //                isD = true;
-    //                isE = false;
-    //            }
-    //            if (count == 2)
-    //            {
-    //                S0.SetActive(false);
-    //                S1.SetActive(false);
-    //                S2.SetActive(true);
-    //                count++;
-    //            }
-    //            if (count == 1)
-    //            {
-    //                S0.SetActive(false);
-    //                S1.SetActive(true);
-    //                S2.SetActive(false);
-    //                count++;
-    //            }
-    //            if (count == 0)
-    //            {
-    //                S0.SetActive(true);
-    //                S1.SetActive(false);
-    //                S2.SetActive(false);
-    //                count++;
-    //            }
-    //        }
-    //        //非常屎山的对话系统，确保文字能够按顺序播放，目前还不可逆
-    //    }
-    //    if (canInteract == true && Vector3.Distance(transform.position, characD.transform.position) <= distance && isB == true)
-    //    {
-    //        Time.timeScale = 0f;
-    //        //先使时间暂停
-    //        characDi.enabled = true;
-    //        //UI图片出现
-    //        GameObject S0, S1, S2;
-    //        S0 = characDI.transform.GetChild(1).GetChild(0).gameObject;
-    //        S1 = characDI.transform.GetChild(1).GetChild(1).gameObject;
-    //        S2 = characDI.transform.GetChild(1).GetChild(2).gameObject;
-    //        //获取三个会出现的对话
+        if (canInteract == true && Vector3.Distance(transform.position, characD.transform.position) <= distance && isA == true)
+        {
+            Time.timeScale = 0f;
+            //先使时间暂停
+            characDi.enabled = true;
+            characDI.SetActive(true);
+            //UI图片出现
+            GameObject S0, S1, S2;
+            S0 = characDI.transform.GetChild(0).GetChild(0).GetChild(0).gameObject;
+            S1 = characDI.transform.GetChild(0).GetChild(0).GetChild(1).gameObject;
+            S2 = characDI.transform.GetChild(0).GetChild(0).GetChild(2).gameObject;
+            //获取三个会出现的对话
 
-    //        if (Input.GetKeyDown(KeyCode.F))
-    //        {
-    //            if (count >= 3)
-    //            {
-    //                S0.SetActive(false);
-    //                S1.SetActive(false);
-    //                S2.SetActive(false);
-    //                characDi.enabled = false;
-    //                canInteract = false;
-    //                Time.timeScale = 1;
-    //                count = -1;
-    //                incVolume = true;
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                if (count >= 3)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    characDi.enabled = false;
+                    canInteract = false;
+                    Time.timeScale = 1;
+                    count = -1;
+                    incVolume = true;
 
-    //                isA = false;
-    //                isB = false;
-    //                isC = false;
-    //                isD = true;
-    //                isE = false;
-    //            }
-    //            if (count == 2)
-    //            {
-    //                S0.SetActive(false);
-    //                S1.SetActive(false);
-    //                S2.SetActive(true);
-    //                count++;
-    //            }
-    //            if (count == 1)
-    //            {
-    //                S0.SetActive(false);
-    //                S1.SetActive(true);
-    //                S2.SetActive(false);
-    //                count++;
-    //            }
-    //            if (count == 0)
-    //            {
-    //                S0.SetActive(true);
-    //                S1.SetActive(false);
-    //                S2.SetActive(false);
-    //                count++;
-    //            }
-    //        }
-    //        //非常屎山的对话系统，确保文字能够按顺序播放，目前还不可逆
-    //    }
-    //    if (canInteract == true && Vector3.Distance(transform.position, characD.transform.position) <= distance && isC == true)
-    //    {
-    //        Time.timeScale = 0f;
-    //        //先使时间暂停
-    //        characDi.enabled = true;
-    //        //UI图片出现
-    //        GameObject S0, S1, S2;
-    //        S0 = characDI.transform.GetChild(2).GetChild(0).gameObject;
-    //        S1 = characDI.transform.GetChild(2).GetChild(1).gameObject;
-    //        S2 = characDI.transform.GetChild(2).GetChild(2).gameObject;
-    //        //获取三个会出现的对话
+                    isA = false;
+                    isB = false;
+                    isC = false;
+                    isD = true;
+                    isE = false;
 
-    //        if (Input.GetKeyDown(KeyCode.F))
-    //        {
-    //            if (count >= 3)
-    //            {
-    //                S0.SetActive(false);
-    //                S1.SetActive(false);
-    //                S2.SetActive(false);
-    //                characDi.enabled = false;
-    //                canInteract = false;
-    //                Time.timeScale = 1;
-    //                count = -1;
-    //                incVolume = true;
+                    characDI.SetActive(false);
+                }
+                if (count == 2)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(true);
+                    count++;
+                }
+                if (count == 1)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(true);
+                    S2.SetActive(false);
+                    count++;
+                }
+                if (count == 0)
+                {
+                    S0.SetActive(true);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    count++;
+                }
+            }
+            //非常屎山的对话系统，确保文字能够按顺序播放，目前还不可逆
+        }
+        if (canInteract == true && Vector3.Distance(transform.position, characD.transform.position) <= distance && isB == true)
+        {
+            Time.timeScale = 0f;
+            //先使时间暂停
+            characDi.enabled = true;
+            characDI.SetActive(true);
+            //UI图片出现
+            GameObject S0, S1, S2;
+            S0 = characDI.transform.GetChild(0).GetChild(1).GetChild(0).gameObject;
+            S1 = characDI.transform.GetChild(0).GetChild(1).GetChild(1).gameObject;
+            S2 = characDI.transform.GetChild(0).GetChild(1).GetChild(2).gameObject;
+            //获取三个会出现的对话
 
-    //                isA = false;
-    //                isB = false;
-    //                isC = false;
-    //                isD = true;
-    //                isE = false;
-    //            }
-    //            if (count == 2)
-    //            {
-    //                S0.SetActive(false);
-    //                S1.SetActive(false);
-    //                S2.SetActive(true);
-    //                count++;
-    //            }
-    //            if (count == 1)
-    //            {
-    //                S0.SetActive(false);
-    //                S1.SetActive(true);
-    //                S2.SetActive(false);
-    //                count++;
-    //            }
-    //            if (count == 0)
-    //            {
-    //                S0.SetActive(true);
-    //                S1.SetActive(false);
-    //                S2.SetActive(false);
-    //                count++;
-    //            }
-    //        }
-    //        //非常屎山的对话系统，确保文字能够按顺序播放，目前还不可逆
-    //    }
-    //    if (canInteract == true && Vector3.Distance(transform.position, characD.transform.position) <= distance && isE == true)
-    //    {
-    //        Time.timeScale = 0f;
-    //        //先使时间暂停
-    //        characDi.enabled = true;
-    //        //UI图片出现
-    //        GameObject S0, S1, S2;
-    //        S0 = characDI.transform.GetChild(3).GetChild(0).gameObject;
-    //        S1 = characDI.transform.GetChild(3).GetChild(1).gameObject;
-    //        S2 = characDI.transform.GetChild(3).GetChild(2).gameObject;
-    //        //获取三个会出现的对话
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                if (count >= 3)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    characDi.enabled = false;
+                    canInteract = false;
+                    Time.timeScale = 1;
+                    count = -1;
+                    incVolume = true;
 
-    //        if (Input.GetKeyDown(KeyCode.F))
-    //        {
-    //            if (count >= 3)
-    //            {
-    //                S0.SetActive(false);
-    //                S1.SetActive(false);
-    //                S2.SetActive(false);
-    //                characDi.enabled = false;
-    //                canInteract = false;
-    //                Time.timeScale = 1;
-    //                count = -1;
-    //                incVolume = true;
+                    isA = false;
+                    isB = false;
+                    isC = false;
+                    isD = true;
+                    isE = false;
 
-    //                isA = false;
-    //                isB = false;
-    //                isC = false;
-    //                isD = true;
-    //                isE = false;
-    //            }
-    //            if (count == 2)
-    //            {
-    //                S0.SetActive(false);
-    //                S1.SetActive(false);
-    //                S2.SetActive(true);
-    //                count++;
-    //            }
-    //            if (count == 1)
-    //            {
-    //                S0.SetActive(false);
-    //                S1.SetActive(true);
-    //                S2.SetActive(false);
-    //                count++;
-    //            }
-    //            if (count == 0)
-    //            {
-    //                S0.SetActive(true);
-    //                S1.SetActive(false);
-    //                S2.SetActive(false);
-    //                count++;
-    //            }
-    //        }
-    //        //非常屎山的对话系统，确保文字能够按顺序播放，目前还不可逆
-    //    }
-    //}
-    //public void CE()
-    //{
-    //    if (Vector3.Distance(transform.position, characE.transform.position) <= distance && canInteract == false)
-    //    {
-    //        characE.SetActive(true);
-    //        if (Input.GetKeyDown(KeyCode.Q))
-    //        {
-    //            canInteract = true;
+                    characDI.SetActive(false);
+                }
+                if (count == 2)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(true);
+                    count++;
+                }
+                if (count == 1)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(true);
+                    S2.SetActive(false);
+                    count++;
+                }
+                if (count == 0)
+                {
+                    S0.SetActive(true);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    count++;
+                }
+            }
+            //非常屎山的对话系统，确保文字能够按顺序播放，目前还不可逆
+        }
+        if (canInteract == true && Vector3.Distance(transform.position, characD.transform.position) <= distance && isC == true)
+        {
+            Time.timeScale = 0f;
+            //先使时间暂停
+            characDi.enabled = true;
+            characDI.SetActive(true);
+            //UI图片出现
+            GameObject S0, S1, S2;
+            S0 = characDI.transform.GetChild(0).GetChild(2).GetChild(0).gameObject;
+            S1 = characDI.transform.GetChild(0).GetChild(2).GetChild(1).gameObject;
+            S2 = characDI.transform.GetChild(0).GetChild(2).GetChild(2).gameObject;
+            //获取三个会出现的对话
 
-    //            decVolume = true;
-    //            audioS.clip = characAmusic;//可以更改播放的音频，总计分两种
-    //            audioS.Play();
-    //        }
-    //    }
-    //    //瓶子和角色距离小于定值的时候，使角色头上的感叹号（characA）出现，此时若按下Q，可对UI进行操控
-    //    if (Vector3.Distance(transform.position, characE.transform.position) > distance && canInteract == false)
-    //    {
-    //        characE.SetActive(false);
-    //        count = 0;
-    //    }
-    //    //距离大于定值，感叹号（characA）不出现
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                if (count >= 3)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    characDi.enabled = false;
+                    canInteract = false;
+                    Time.timeScale = 1;
+                    count = -1;
+                    incVolume = true;
 
-    //    if (canInteract == true && Vector3.Distance(transform.position, characE.transform.position) <= distance && isA == true)
-    //    {
-    //        Time.timeScale = 0f;
-    //        //先使时间暂停
-    //        characEi.enabled = true;
-    //        //UI图片出现
-    //        GameObject S0, S1, S2;
-    //        S0 = characEI.transform.GetChild(0).GetChild(0).gameObject;
-    //        S1 = characEI.transform.GetChild(0).GetChild(1).gameObject;
-    //        S2 = characEI.transform.GetChild(0).GetChild(2).gameObject;
+                    isA = false;
+                    isB = false;
+                    isC = false;
+                    isD = true;
+                    isE = false;
 
-    //        if (Input.GetKeyDown(KeyCode.F))
-    //        {
-    //            if (count >= 3)
-    //            {
-    //                S0.SetActive(false);
-    //                S1.SetActive(false);
-    //                S2.SetActive(false);
-    //                characEi.enabled = false;
-    //                canInteract = false;
-    //                Time.timeScale = 1;
-    //                count = -1;
-    //                incVolume = true;
+                    characDI.SetActive(false);
+                }
+                if (count == 2)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(true);
+                    count++;
+                }
+                if (count == 1)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(true);
+                    S2.SetActive(false);
+                    count++;
+                }
+                if (count == 0)
+                {
+                    S0.SetActive(true);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    count++;
+                }
+            }
+            //非常屎山的对话系统，确保文字能够按顺序播放，目前还不可逆
+        }
+        if (canInteract == true && Vector3.Distance(transform.position, characD.transform.position) <= distance && isE == true)
+        {
+            Time.timeScale = 0f;
+            //先使时间暂停
+            characDi.enabled = true;
+            characDI.SetActive(true);
+            //UI图片出现
+            GameObject S0, S1, S2;
+            S0 = characDI.transform.GetChild(0).GetChild(3).GetChild(0).gameObject;
+            S1 = characDI.transform.GetChild(0).GetChild(3).GetChild(1).gameObject;
+            S2 = characDI.transform.GetChild(0).GetChild(3).GetChild(2).gameObject;
+            //获取三个会出现的对话
 
-    //                isA = false;
-    //                isB = false;
-    //                isC = false;
-    //                isD = false;
-    //                isE = true;
-    //            }
-    //            if (count == 2)
-    //            {
-    //                S0.SetActive(false);
-    //                S1.SetActive(false);
-    //                S2.SetActive(true);
-    //                count++;
-    //            }
-    //            if (count == 1)
-    //            {
-    //                S0.SetActive(false);
-    //                S1.SetActive(true);
-    //                S2.SetActive(false);
-    //                count++;
-    //            }
-    //            if (count == 0)
-    //            {
-    //                S0.SetActive(true);
-    //                S1.SetActive(false);
-    //                S2.SetActive(false);
-    //                count++;
-    //            }
-    //        }
-    //        //非常屎山的对话系统，确保文字能够按顺序播放，目前还不可逆
-    //    }
-    //    if (canInteract == true && Vector3.Distance(transform.position, characE.transform.position) <= distance && isB == true)
-    //    {
-    //        Time.timeScale = 0f;
-    //        //先使时间暂停
-    //        characEi.enabled = true;
-    //        //UI图片出现
-    //        GameObject S0, S1, S2;
-    //        S0 = characEI.transform.GetChild(1).GetChild(0).gameObject;
-    //        S1 = characEI.transform.GetChild(1).GetChild(1).gameObject;
-    //        S2 = characEI.transform.GetChild(1).GetChild(2).gameObject;
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                if (count >= 3)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    characDi.enabled = false;
+                    canInteract = false;
+                    Time.timeScale = 1;
+                    count = -1;
+                    incVolume = true;
 
-    //        if (Input.GetKeyDown(KeyCode.F))
-    //        {
-    //            if (count >= 3)
-    //            {
-    //                S0.SetActive(false);
-    //                S1.SetActive(false);
-    //                S2.SetActive(false);
-    //                characEi.enabled = false;
-    //                canInteract = false;
-    //                Time.timeScale = 1;
-    //                count = -1;
-    //                incVolume = true;
+                    isA = false;
+                    isB = false;
+                    isC = false;
+                    isD = true;
+                    isE = false;
 
-    //                isA = false;
-    //                isB = false;
-    //                isC = false;
-    //                isD = false;
-    //                isE = true;
-    //            }
-    //            if (count == 2)
-    //            {
-    //                S0.SetActive(false);
-    //                S1.SetActive(false);
-    //                S2.SetActive(true);
-    //                count++;
-    //            }
-    //            if (count == 1)
-    //            {
-    //                S0.SetActive(false);
-    //                S1.SetActive(true);
-    //                S2.SetActive(false);
-    //                count++;
-    //            }
-    //            if (count == 0)
-    //            {
-    //                S0.SetActive(true);
-    //                S1.SetActive(false);
-    //                S2.SetActive(false);
-    //                count++;
-    //            }
-    //        }
-    //        //非常屎山的对话系统，确保文字能够按顺序播放，目前还不可逆
-    //    }
-    //    if (canInteract == true && Vector3.Distance(transform.position, characE.transform.position) <= distance && isC == true)
-    //    {
-    //        Time.timeScale = 0f;
-    //        //先使时间暂停
-    //        characEi.enabled = true;
-    //        //UI图片出现
-    //        GameObject S0, S1, S2;
-    //        S0 = characEI.transform.GetChild(2).GetChild(0).gameObject;
-    //        S1 = characEI.transform.GetChild(2).GetChild(1).gameObject;
-    //        S2 = characEI.transform.GetChild(2).GetChild(2).gameObject;
+                    characDI.SetActive(false);
+                }
+                if (count == 2)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(true);
+                    count++;
+                }
+                if (count == 1)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(true);
+                    S2.SetActive(false);
+                    count++;
+                }
+                if (count == 0)
+                {
+                    S0.SetActive(true);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    count++;
+                }
+            }
+            //非常屎山的对话系统，确保文字能够按顺序播放，目前还不可逆
+        }
+    }
+    public void CE()
+    {
+        if (Vector3.Distance(transform.position, characE.transform.position) <= distance && canInteract == false)
+        {
+            characE.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                canInteract = true;
+                rightcol.SetActive(false);
+                //decVolume = true;
+                //audioS.clip = characAmusic;//可以更改播放的音频，总计分两种
+                //audioS.Play();
+            }
+        }
+        //瓶子和角色距离小于定值的时候，使角色头上的感叹号（characA）出现，此时若按下Q，可对UI进行操控
+        if (Vector3.Distance(transform.position, characE.transform.position) > distance && canInteract == false)
+        {
+            characE.SetActive(false);
+            count = 0;
+            rightcol.SetActive(true);
+        }
+        //距离大于定值，感叹号（characA）不出现
 
-    //        if (Input.GetKeyDown(KeyCode.F))
-    //        {
-    //            if (count >= 3)
-    //            {
-    //                S0.SetActive(false);
-    //                S1.SetActive(false);
-    //                S2.SetActive(false);
-    //                characEi.enabled = false;
-    //                canInteract = false;
-    //                Time.timeScale = 1;
-    //                count = -1;
-    //                incVolume = true;
+        if (canInteract == true && Vector3.Distance(transform.position, characE.transform.position) <= distance && isA == true)
+        {
+            Time.timeScale = 0f;
+            //先使时间暂停
+            characEi.enabled = true;
+            characEI.SetActive(true);
+            //UI图片出现
+            GameObject S0, S1, S2;
+            S0 = characEI.transform.GetChild(0).GetChild(0).GetChild(0).gameObject;
+            S1 = characEI.transform.GetChild(0).GetChild(0).GetChild(1).gameObject;
+            S2 = characEI.transform.GetChild(0).GetChild(0).GetChild(2).gameObject;
 
-    //                isA = false;
-    //                isB = false;
-    //                isC = false;
-    //                isD = false;
-    //                isE = true;
-    //            }
-    //            if (count == 2)
-    //            {
-    //                S0.SetActive(false);
-    //                S1.SetActive(false);
-    //                S2.SetActive(true);
-    //                count++;
-    //            }
-    //            if (count == 1)
-    //            {
-    //                S0.SetActive(false);
-    //                S1.SetActive(true);
-    //                S2.SetActive(false);
-    //                count++;
-    //            }
-    //            if (count == 0)
-    //            {
-    //                S0.SetActive(true);
-    //                S1.SetActive(false);
-    //                S2.SetActive(false);
-    //                count++;
-    //            }
-    //        }
-    //        //非常屎山的对话系统，确保文字能够按顺序播放，目前还不可逆
-    //    }
-    //    if (canInteract == true && Vector3.Distance(transform.position, characE.transform.position) <= distance && isD == true)
-    //    {
-    //        Time.timeScale = 0f;
-    //        //先使时间暂停
-    //        characEi.enabled = true;
-    //        //UI图片出现
-    //        GameObject S0, S1, S2;
-    //        S0 = characEI.transform.GetChild(3).GetChild(0).gameObject;
-    //        S1 = characEI.transform.GetChild(3).GetChild(1).gameObject;
-    //        S2 = characEI.transform.GetChild(3).GetChild(2).gameObject;
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                if (count >= 3)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    characEi.enabled = false;
+                    canInteract = false;
+                    Time.timeScale = 1;
+                    count = -1;
+                    incVolume = true;
 
-    //        if (Input.GetKeyDown(KeyCode.F))
-    //        {
-    //            if (count >= 3)
-    //            {
-    //                S0.SetActive(false);
-    //                S1.SetActive(false);
-    //                S2.SetActive(false);
-    //                characEi.enabled = false;
-    //                canInteract = false;
-    //                Time.timeScale = 1;
-    //                count = -1;
-    //                incVolume = true;
+                    isA = false;
+                    isB = false;
+                    isC = false;
+                    isD = false;
+                    isE = true;
 
-    //                isA = false;
-    //                isB = false;
-    //                isC = false;
-    //                isD = false;
-    //                isE = true;
-    //            }
-    //            if (count == 2)
-    //            {
-    //                S0.SetActive(false);
-    //                S1.SetActive(false);
-    //                S2.SetActive(true);
-    //                count++;
-    //            }
-    //            if (count == 1)
-    //            {
-    //                S0.SetActive(false);
-    //                S1.SetActive(true);
-    //                S2.SetActive(false);
-    //                count++;
-    //            }
-    //            if (count == 0)
-    //            {
-    //                S0.SetActive(true);
-    //                S1.SetActive(false);
-    //                S2.SetActive(false);
-    //                count++;
-    //            }
-    //        }
-    //        //非常屎山的对话系统，确保文字能够按顺序播放，目前还不可逆
-    //    }
-    //}
+                    characEI.SetActive(false);
+                }
+                if (count == 2)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(true);
+                    count++;
+                }
+                if (count == 1)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(true);
+                    S2.SetActive(false);
+                    count++;
+                }
+                if (count == 0)
+                {
+                    S0.SetActive(true);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    count++;
+                }
+            }
+            //非常屎山的对话系统，确保文字能够按顺序播放，目前还不可逆
+        }
+        if (canInteract == true && Vector3.Distance(transform.position, characE.transform.position) <= distance && isB == true)
+        {
+            Time.timeScale = 0f;
+            //先使时间暂停
+            characEi.enabled = true;
+            characEI.SetActive(true);
+            //UI图片出现
+            GameObject S0, S1, S2;
+            S0 = characEI.transform.GetChild(0).GetChild(1).GetChild(0).gameObject;
+            S1 = characEI.transform.GetChild(0).GetChild(1).GetChild(1).gameObject;
+            S2 = characEI.transform.GetChild(0).GetChild(1).GetChild(2).gameObject;
+
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                if (count >= 3)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    characEi.enabled = false;
+                    canInteract = false;
+                    Time.timeScale = 1;
+                    count = -1;
+                    incVolume = true;
+
+                    isA = false;
+                    isB = false;
+                    isC = false;
+                    isD = false;
+                    isE = true;
+
+                    characEI.SetActive(false);
+                }
+                if (count == 2)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(true);
+                    count++;
+                }
+                if (count == 1)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(true);
+                    S2.SetActive(false);
+                    count++;
+                }
+                if (count == 0)
+                {
+                    S0.SetActive(true);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    count++;
+                }
+            }
+            //非常屎山的对话系统，确保文字能够按顺序播放，目前还不可逆
+        }
+        if (canInteract == true && Vector3.Distance(transform.position, characE.transform.position) <= distance && isC == true)
+        {
+            Time.timeScale = 0f;
+            //先使时间暂停
+            characEi.enabled = true;
+            characEI.SetActive(true);
+            //UI图片出现
+            GameObject S0, S1, S2;
+            S0 = characEI.transform.GetChild(0).GetChild(2).GetChild(0).gameObject;
+            S1 = characEI.transform.GetChild(0).GetChild(2).GetChild(1).gameObject;
+            S2 = characEI.transform.GetChild(0).GetChild(2).GetChild(2).gameObject;
+
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                if (count >= 3)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    characEi.enabled = false;
+                    canInteract = false;
+                    Time.timeScale = 1;
+                    count = -1;
+                    incVolume = true;
+
+                    isA = false;
+                    isB = false;
+                    isC = false;
+                    isD = false;
+                    isE = true;
+
+                    characEI.SetActive(false);
+                }
+                if (count == 2)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(true);
+                    count++;
+                }
+                if (count == 1)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(true);
+                    S2.SetActive(false);
+                    count++;
+                }
+                if (count == 0)
+                {
+                    S0.SetActive(true);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    count++;
+                }
+            }
+            //非常屎山的对话系统，确保文字能够按顺序播放，目前还不可逆
+        }
+        if (canInteract == true && Vector3.Distance(transform.position, characE.transform.position) <= distance && isD == true)
+        {
+            Time.timeScale = 0f;
+            //先使时间暂停
+            characEi.enabled = true;
+            characEI.SetActive(true);
+            //UI图片出现
+            GameObject S0, S1, S2;
+            S0 = characEI.transform.GetChild(0).GetChild(3).GetChild(0).gameObject;
+            S1 = characEI.transform.GetChild(0).GetChild(3).GetChild(1).gameObject;
+            S2 = characEI.transform.GetChild(0).GetChild(3).GetChild(2).gameObject;
+
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                if (count >= 3)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    characEi.enabled = false;
+                    canInteract = false;
+                    Time.timeScale = 1;
+                    count = -1;
+                    incVolume = true;
+
+                    isA = false;
+                    isB = false;
+                    isC = false;
+                    isD = false;
+                    isE = true;
+
+                    characEI.SetActive(false);
+                }
+                if (count == 2)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(false);
+                    S2.SetActive(true);
+                    count++;
+                }
+                if (count == 1)
+                {
+                    S0.SetActive(false);
+                    S1.SetActive(true);
+                    S2.SetActive(false);
+                    count++;
+                }
+                if (count == 0)
+                {
+                    S0.SetActive(true);
+                    S1.SetActive(false);
+                    S2.SetActive(false);
+                    count++;
+                }
+            }
+            //非常屎山的对话系统，确保文字能够按顺序播放，目前还不可逆
+        }
+    }
+    public void RightPanelCheck()
+    {
+        if (isA == true)
+        {
+            AQ.SetActive(true);
+            BQ.SetActive(false);
+            CQ.SetActive(false);
+            DQ.SetActive(false);
+            EQ.SetActive(false);
+        }
+        if (isB == true)
+        {
+            AQ.SetActive(false);
+            BQ.SetActive(true);
+            CQ.SetActive(false);
+            DQ.SetActive(false);
+            EQ.SetActive(false);
+        }
+        if (isC == true)
+        {
+            AQ.SetActive(false);
+            BQ.SetActive(false);
+            CQ.SetActive(true);
+            DQ.SetActive(false);
+            EQ.SetActive(false);
+        }
+        if (isD == true)
+        {
+            AQ.SetActive(false);
+            BQ.SetActive(false);
+            CQ.SetActive(false);
+            DQ.SetActive(true);
+            EQ.SetActive(false);
+        }
+        if (isE == true)
+        {
+            AQ.SetActive(false);
+            BQ.SetActive(false);
+            CQ.SetActive(false);
+            DQ.SetActive(false);
+            EQ.SetActive(true);
+        }
+    }
 }
