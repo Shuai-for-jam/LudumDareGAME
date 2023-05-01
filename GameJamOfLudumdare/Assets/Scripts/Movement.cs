@@ -20,11 +20,12 @@ public class Movement : MonoBehaviour
 
     Vector3 nearestPos1;
     Vector3 nearestPos2;
+    Vector3 nearestPos;
 
     float nearestTF1;
     float nearestTF2;
     float nearestTF;
-    float distance;
+    public float distance;
 
     bool interact = false;
 
@@ -42,135 +43,118 @@ public class Movement : MonoBehaviour
             bottle.GetComponent<SplineController>().Clamping = CurvyClamping.Loop;
 
 
+        if (SplineNow == Spline1)
+        {
+            // 将target的坐标转换到spline所在的本地坐标系  
+            var targetPos1 = Spline2.transform.InverseTransformPoint(target.position);
+            var targetPos2 = Spline3.transform.InverseTransformPoint(target.position);
+            // 获得target在spline上的最近点的TF值  
+            nearestTF1 = Spline2.GetNearestPointTF(targetPos1);
+            nearestTF2 = Spline3.GetNearestPointTF(targetPos2);
+            // 转换到世界坐标系的spline上最近点的坐标值  
+            nearestPos1 = Spline2.transform.TransformPoint(Spline2.Interpolate(nearestTF1));
+            nearestPos2 = Spline3.transform.TransformPoint(Spline3.Interpolate(nearestTF2));
+            float distance1 = Vector3.Distance(target.position, nearestPos1);
+            float distance2 = Vector3.Distance(target.position, nearestPos2);
+            if (distance1 < distance2)
+            {
+                distance = distance1;
+                nearestPos = nearestPos1;
+                nearestTF = nearestTF1;
+                SplineGoTo = Spline2;
+            }
+
+            else
+            {
+                distance = distance2;
+                nearestPos = nearestPos2;
+                nearestTF = nearestTF2;
+                SplineGoTo = Spline3;
+
+            }
+            Debug.Log(distance);
+
+        }
+
+        if (SplineNow == Spline2)
+        {
+            // 将target的坐标转换到spline所在的本地坐标系  
+            var targetPos1 = Spline1.transform.InverseTransformPoint(target.position);
+            var targetPos2 = Spline3.transform.InverseTransformPoint(target.position);
+            // 获得target在spline上的最近点的TF值  
+            nearestTF1 = Spline1.GetNearestPointTF(targetPos1);
+            nearestTF2 = Spline3.GetNearestPointTF(targetPos2);
+            // 转换到世界坐标系的spline上最近点的坐标值  
+            nearestPos1 = Spline1.transform.TransformPoint(Spline1.Interpolate(nearestTF1));
+            nearestPos2 = Spline3.transform.TransformPoint(Spline3.Interpolate(nearestTF2));
+            float distance1 = Vector3.Distance(target.position, nearestPos1);
+            float distance2 = Vector3.Distance(target.position, nearestPos2);
+            if (distance1 < distance2)
+            {
+                distance = distance1;
+                nearestPos = nearestPos1;
+                nearestTF = nearestTF1;
+                SplineGoTo = Spline1;
+            }
+
+            else
+            {
+                distance = distance2;
+                nearestPos = nearestPos2;
+                nearestTF = nearestTF2;
+                SplineGoTo = Spline3;
+
+            }
+            Debug.Log(distance);
+
+
+        }
+        if (SplineNow == Spline3)
+        {
+            // 将target的坐标转换到spline所在的本地坐标系  
+            var targetPos1 = Spline1.transform.InverseTransformPoint(target.position);
+            var targetPos2 = Spline2.transform.InverseTransformPoint(target.position);
+            // 获得target在spline上的最近点的TF值  
+            nearestTF1 = Spline1.GetNearestPointTF(targetPos1);
+            nearestTF2 = Spline2.GetNearestPointTF(targetPos2);
+            // 转换到世界坐标系的spline上最近点的坐标值  
+            nearestPos1 = Spline1.transform.TransformPoint(Spline1.Interpolate(nearestTF1));
+            nearestPos2 = Spline2.transform.TransformPoint(Spline2.Interpolate(nearestTF2));
+            float distance1 = Vector3.Distance(target.position, nearestPos1);
+            float distance2 = Vector3.Distance(target.position, nearestPos2);
+            if (distance1 < distance2)
+            {
+                distance = distance1;
+                nearestPos = nearestPos1;
+                nearestTF = nearestTF1;
+                SplineGoTo = Spline1;
+            }
+
+            else
+            {
+                distance = distance2;
+                nearestPos = nearestPos2;
+                nearestTF = nearestTF2;
+                SplineGoTo = Spline2;
+
+            }
+            Debug.Log(distance);
+
+
+        }
+
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Vector3 nearestPos;
-            if (SplineNow == Spline1)
+            if (distance <= MaxDistance)
             {
-                // 将target的坐标转换到spline所在的本地坐标系  
-                var targetPos1 = Spline2.transform.InverseTransformPoint(target.position);
-                var targetPos2 = Spline3.transform.InverseTransformPoint(target.position);
-                // 获得target在spline上的最近点的TF值  
-                nearestTF1 = Spline2.GetNearestPointTF(targetPos1);
-                nearestTF2 = Spline3.GetNearestPointTF(targetPos2);
-                // 转换到世界坐标系的spline上最近点的坐标值  
-                nearestPos1 = Spline2.transform.TransformPoint(Spline2.Interpolate(nearestTF1));
-                nearestPos2 = Spline3.transform.TransformPoint(Spline3.Interpolate(nearestTF2));
-                float distance1 = Vector3.Distance(target.position, nearestPos1);
-                float distance2 = Vector3.Distance(target.position, nearestPos2);
-                if (distance1 < distance2)
-                {
-                    distance = distance1;
-                    nearestPos = nearestPos1;
-                    nearestTF = nearestTF1;
-                    SplineGoTo = Spline2;
-                }
 
-                else
-                {
-                    distance = distance2;
-                    nearestPos = nearestPos2;
-                    nearestTF = nearestTF2;
-                    SplineGoTo = Spline3;
-
-                }
-                Debug.Log(distance);
-
-                if (distance <= MaxDistance)
-                {
-
-                    bottle.GetComponent<SplineController>().Spline = null;
-                    StartCoroutine(MoveToNearestPos(SplineGoTo, nearestPos));
-                }
-
-                else
-                    Debug.Log("bukeyi");
+                bottle.GetComponent<SplineController>().Spline = null;
+                StartCoroutine(MoveToNearestPos(SplineGoTo, nearestPos));
             }
 
-            if (SplineNow == Spline2)
-            {
-                // 将target的坐标转换到spline所在的本地坐标系  
-                var targetPos1 = Spline1.transform.InverseTransformPoint(target.position);
-                var targetPos2 = Spline3.transform.InverseTransformPoint(target.position);
-                // 获得target在spline上的最近点的TF值  
-                nearestTF1 = Spline1.GetNearestPointTF(targetPos1);
-                nearestTF2 = Spline3.GetNearestPointTF(targetPos2);
-                // 转换到世界坐标系的spline上最近点的坐标值  
-                nearestPos1 = Spline1.transform.TransformPoint(Spline1.Interpolate(nearestTF1));
-                nearestPos2 = Spline3.transform.TransformPoint(Spline3.Interpolate(nearestTF2));
-                float distance1 = Vector3.Distance(target.position, nearestPos1);
-                float distance2 = Vector3.Distance(target.position, nearestPos2);
-                if (distance1 < distance2)
-                {
-                    distance = distance1;
-                    nearestPos = nearestPos1;
-                    nearestTF = nearestTF1;
-                    SplineGoTo = Spline1;
-                }
-
-                else
-                {
-                    distance = distance2;
-                    nearestPos = nearestPos2;
-                    nearestTF = nearestTF2;
-                    SplineGoTo = Spline3;
-
-                }
-                Debug.Log(distance);
-
-                if (distance <= MaxDistance)
-                {
-
-                    bottle.GetComponent<SplineController>().Spline = null;
-                    StartCoroutine(MoveToNearestPos(SplineGoTo, nearestPos));
-                }
-
-                else
-                    Debug.Log("bukeyi");
-            }
-            if (SplineNow == Spline3)
-            {
-                // 将target的坐标转换到spline所在的本地坐标系  
-                var targetPos1 = Spline1.transform.InverseTransformPoint(target.position);
-                var targetPos2 = Spline2.transform.InverseTransformPoint(target.position);
-                // 获得target在spline上的最近点的TF值  
-                nearestTF1 = Spline1.GetNearestPointTF(targetPos1);
-                nearestTF2 = Spline2.GetNearestPointTF(targetPos2);
-                // 转换到世界坐标系的spline上最近点的坐标值  
-                nearestPos1 = Spline1.transform.TransformPoint(Spline1.Interpolate(nearestTF1));
-                nearestPos2 = Spline2.transform.TransformPoint(Spline2.Interpolate(nearestTF2));
-                float distance1 = Vector3.Distance(target.position, nearestPos1);
-                float distance2 = Vector3.Distance(target.position, nearestPos2);
-                if (distance1 < distance2)
-                {
-                    distance = distance1;
-                    nearestPos = nearestPos1;
-                    nearestTF = nearestTF1;
-                    SplineGoTo = Spline1;
-                }
-
-                else
-                {
-                    distance = distance2;
-                    nearestPos = nearestPos2;
-                    nearestTF = nearestTF2;
-                    SplineGoTo = Spline2;
-
-                }
-                Debug.Log(distance);
-
-                if (distance <= MaxDistance)
-                {
-
-                    bottle.GetComponent<SplineController>().Spline = null;
-                    StartCoroutine(MoveToNearestPos(SplineGoTo, nearestPos));
-                }
-
-                else
-                    Debug.Log("bukeyi");
-            }
-
-
+            else
+                Debug.Log("bukeyi");
 
         }
 
@@ -195,7 +179,7 @@ public class Movement : MonoBehaviour
 
 
 
-    IEnumerator MoveToNearestPos(CurvySpline SplineGoTo, Vector3 nearestPos)
+    public IEnumerator MoveToNearestPos(CurvySpline SplineGoTo, Vector3 nearestPos)
     {
         // 计算物体到目标的距离
         float distanceToTarget = Vector3.Distance(transform.position, nearestPos);
