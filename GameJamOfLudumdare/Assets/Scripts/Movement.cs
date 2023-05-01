@@ -6,6 +6,9 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    public GameObject wave1;
+    public GameObject wave2;
+    public GameObject wave3;
     public GameObject bottle;
     public CurvySpline Spline1;
     public CurvySpline Spline2;
@@ -15,7 +18,9 @@ public class Movement : MonoBehaviour
     public float TransSpeed;
     public float speed;
 
-    private CurvySpline SplineNow;
+
+
+    public CurvySpline SplineNow;
     private CurvySpline SplineGoTo;
 
     Vector3 nearestPos1;
@@ -35,7 +40,9 @@ public class Movement : MonoBehaviour
     }
     void Update()
     {
+
         SplineNow = bottle.GetComponent<SplineController>().Spline;
+        
 
         if (SplineNow == Spline1)
             bottle.GetComponent<SplineController>().Clamping = CurvyClamping.Clamp;
@@ -197,5 +204,12 @@ public class Movement : MonoBehaviour
         bottle.GetComponent<SplineController>().Spline = SplineGoTo;
 
         bottle.GetComponent<SplineController>().Position = nearestTF;
+
+        if (SplineGoTo == Spline1)
+            bottle.GetComponent<SplineController>().MovementDirection = wave1.GetComponent<SplineController>().MovementDirection;
+        if (SplineGoTo == Spline2)
+            bottle.GetComponent<SplineController>().MovementDirection = wave2.GetComponent<SplineController>().MovementDirection;
+        else
+            bottle.GetComponent<SplineController>().MovementDirection = wave3.GetComponent<SplineController>().MovementDirection;
     }
 }
