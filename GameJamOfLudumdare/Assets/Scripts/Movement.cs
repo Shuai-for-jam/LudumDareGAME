@@ -13,6 +13,7 @@ public class Movement : MonoBehaviour
     public Transform target;
     public float MaxDistance;
     public float TransSpeed;
+    public float speed;
 
     private CurvySpline SplineNow;
     private CurvySpline SplineGoTo;
@@ -25,6 +26,12 @@ public class Movement : MonoBehaviour
     float nearestTF;
     float distance;
 
+    bool interact = false;
+
+    void Start()
+    {
+        speed = bottle.GetComponent<SplineController>().Speed;
+    }
     void Update()
     {
         SplineNow = bottle.GetComponent<SplineController>().Spline;
@@ -167,15 +174,26 @@ public class Movement : MonoBehaviour
 
         }
 
-            
-
         if (Input.GetKeyDown(KeyCode.R))    
         {
             if (bottle.GetComponent<SplineController>().MovementDirection == MovementDirection.Forward)
                 bottle.GetComponent<SplineController>().MovementDirection = MovementDirection.Backward;
-            else bottle.GetComponent<SplineController>().MovementDirection = MovementDirection.Forward;
+            else 
+                bottle.GetComponent<SplineController>().MovementDirection = MovementDirection.Forward;
         }
+
+        bool interact = bottle.GetComponent<UI_conversation>().canInteract;
+        if (interact == true)
+            bottle.GetComponent<SplineController>().Speed = 0;
+        else
+            bottle.GetComponent<SplineController>().Speed = speed;
     }
+
+
+
+
+
+
 
     IEnumerator MoveToNearestPos(CurvySpline SplineGoTo, Vector3 nearestPos)
     {
