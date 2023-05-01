@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1706.6667
     height: 976
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Inspector
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 841
+  controlID: 109
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 842
+  controlID: 110
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 753
+  controlID: 60
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -244,8 +244,8 @@ MonoBehaviour:
     y: 0
     width: 466.6667
     height: 474.66666
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -646,9 +646,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 3.3395576, y: -1.0365181, z: -8.7393265}
+    m_Target: {x: 622.3775, y: 157.10498, z: 0}
     speed: 2
-    m_Value: {x: 3.3395576, y: -1.0365181, z: -8.7393265}
+    m_Value: {x: 622.3775, y: 157.10498, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -695,17 +695,17 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.008778002, y: -0.8245546, z: 0.012774279, w: 0.56568134}
+    m_Target: {x: 0.0015044935, y: 0.07464169, z: 0.00002043945, w: 0.9972669}
     speed: 2
-    m_Value: {x: 0.0087582795, y: -0.8253502, z: 0.012786628, w: 0.56440836}
+    m_Value: {x: 0.001504407, y: 0.0746374, z: 0.000020438274, w: 0.9972096}
   m_Size:
-    m_Target: 41.124176
+    m_Target: 426.4966
     speed: 2
-    m_Value: 43.061966
+    m_Value: 426.4966
   m_Ortho:
-    m_Target: 0
+    m_Target: 1
     speed: 2
-    m_Value: 0
+    m_Value: 1
   m_CameraSettings:
     m_Speed: 1
     m_SpeedNormalized: 0.5
@@ -853,24 +853,24 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 3ecfffff9cf2ffff00fbffff8675000058760000de760000a0770000
+      scrollPos: {x: 0, y: 223.33334}
+      m_SelectedIDs: 9647ffff
+      m_LastClickedID: -47210
+      m_ExpandedIDs: 92d1ffff3cd2ffff88d3ffff38d8ffff787d00009e7d000040800000888100008282000098820000f8820000fa820000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: B_Head
+        m_OriginalName: B_Head
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -11716
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 4
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 10}
       m_SearchString: 
@@ -950,22 +950,21 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders:
-    - Assets/Shuai_assets/Prefabs
+    m_Folders: []
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Zhangzonshuai\Documents\GitHub\LudumDareGAME\GameJamOfLudumdare
+  m_LastProjectPath: E:\Git docs\Ludum Dare\LudumDareGAME\GameJamOfLudumdare
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: ca610000
     m_LastClickedID: 25034
-    m_ExpandedIDs: ffffffff000000008aad00008cad00008ead000090ad000092ad0000
+    m_ExpandedIDs: 000000005cb700005eb7000060b7000062b7000064b7000066b7000068b700006ab700006cb700006eb7000070b70000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -990,24 +989,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 503.66663}
+    scrollPos: {x: 0, y: 543.6666}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff000000008aad00008cad00008ead000090ad000092ad0000
+    m_ExpandedIDs: ffffffff000000005cb700005eb7000060b7000062b7000064b7000066b7000068b700006ab700006cb700006eb7000070b70000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: wakuwaku
-      m_OriginalName: wakuwaku
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 12714
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 11}
     m_SearchString: 
@@ -1085,7 +1084,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 260.66656
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
