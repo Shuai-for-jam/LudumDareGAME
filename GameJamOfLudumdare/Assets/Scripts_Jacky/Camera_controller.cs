@@ -11,18 +11,16 @@ public class Camera_controller : MonoBehaviour
     public float releaseTime, pressTime;
     Vector3 startCam;
 
-    Vector3 direction_c;
+    public Vector3 direction_c;
     public float speed_c;
 
     void Start()
     {
-        pressTime = 0.6f;
+        //pressTime = 0.6f;
 
-        direction_c = new Vector3(planet.position.x - startCam.x, planet.position.y - startCam.y, planet.position.z - startCam.z).normalized;
-
-        planet = GameObject.FindGameObjectWithTag("Planet").GetComponent<Transform>();
-        startCam = transform.position;
-        canScale = true;
+        //direction_c = new Vector3(planet.position.x - startCam.x, planet.position.y - startCam.y, planet.position.z - startCam.z).normalized;
+        //startCam = transform.position;
+        //canScale = true;
     }
 
 
@@ -30,13 +28,17 @@ public class Camera_controller : MonoBehaviour
     {
         if (Input.mouseScrollDelta.y > 0 && Vector3.Distance(transform.position, planet.position) >= minDis)
         {
-            transform.Translate(direction_c * Time.deltaTime * speed_c);
+            transform.Translate(-new Vector3(0, -2, -481).normalized * Time.deltaTime * speed_c);
         }
         if (Input.mouseScrollDelta.y < 0 && Vector3.Distance(transform.position, planet.position) <= maxDis)
         {
-            transform.Translate(-direction_c * Time.deltaTime * speed_c);
+            transform.Translate(new Vector3(0, -2, -481).normalized * Time.deltaTime * speed_c);
         }
-
+        Debug.Log(Input.mouseScrollDelta.y);
+        //if (Input.mouseScrollDelta.y>0)
+        //{
+        //    transform.Translate(-new Vector3(0, -2, -481).normalized * Time.deltaTime * speed_c);
+        //}
         //    if (Input.GetKey(KeyCode.Space) && canScale == true)
         //    {
         //        transform.position = Vector3.Lerp(transform.position, planet.position, Time.deltaTime / 4);
