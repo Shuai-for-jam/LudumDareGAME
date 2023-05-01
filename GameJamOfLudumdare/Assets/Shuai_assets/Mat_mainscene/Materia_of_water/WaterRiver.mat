@@ -47,7 +47,7 @@ Material:
     - _DeepWater: {r: 0.18316123, g: 0.40148604, b: 0.5943396, a: 1}
     - _ShadowWater: {r: 0.22386368, g: 0.45741865, b: 0.9245283, a: 1}
     - _WaterDefultColor: {r: 0.18945049, g: 0.5394591, b: 0.9716981, a: 0}
-    - _color_waterHightlight: {r: 0.05463943, g: 0.7481399, b: 0.8574187, a: 1}
+    - _color_waterHightlight: {r: 0.036221784, g: 0.49416864, b: 0.5666122, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &6426412454654607713
 MonoBehaviour:
