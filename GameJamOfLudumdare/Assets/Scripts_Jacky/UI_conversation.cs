@@ -14,10 +14,10 @@ public class UI_conversation : MonoBehaviour
     public float count;
 
     AudioSource audioS;
-    public AudioClip characAmusic;
+    public AudioClip characAmusic,characBmusic;
     AudioSource audioSB;
     public bool incVolume, decVolume;
-    float rate = 0.001f;
+    float rate = 0.005f;
 
     public bool isA, isB, isC, isD, isE;//判断到底是哪一个对话打开了
     public GameObject leftcol, rightcol;
@@ -26,9 +26,9 @@ public class UI_conversation : MonoBehaviour
 
     void Start()
     {
-        //audioS = GetComponent<AudioSource>();
+        audioS = GetComponent<AudioSource>();
         audioSB = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>();
-        //audioS.volume = 0;
+        audioS.volume = 0;
 
         characAi = characAI.GetComponent<Image>();
         characAi.enabled = false;
@@ -41,6 +41,8 @@ public class UI_conversation : MonoBehaviour
         characEi = characEI.GetComponent<Image>();
         characEi.enabled = false;
         count = 0;
+
+        isA = true;
     }
 
     void Update()
@@ -51,28 +53,27 @@ public class UI_conversation : MonoBehaviour
         CD();
         CE();
         RightPanelCheck();
-        //if (decVolume == true)
-        //{
-        //    audioSB.volume -= rate;
-        //    audioS.volume += rate;
-        //    Debug.Log(audioS.volume);
-        //}
-        //if (audioSB.volume <= 0)
-        //{
-        //    decVolume = false;
-        //}
-        //if (incVolume == true)
-        //{
-        //    audioSB.volume += rate;
-        //    audioS.volume -= rate;
-        //    Debug.Log(audioS.volume);
-        //}
-        //if (audioSB.volume >= 1)
-        //{
-        //    incVolume = false;
-        //}
-
-        
+        if (decVolume == true)
+        {
+            audioSB.volume -= rate;
+            audioS.volume += rate;
+            Debug.Log(audioS.volume);
+        }
+        if (audioSB.volume <= 0)
+        {
+            decVolume = false;
+        }
+        if (incVolume == true)
+        {
+            audioSB.volume += (rate*0.5f);
+            audioS.volume -= (rate*0.5f);
+            Debug.Log(audioS.volume);
+        }
+        if (audioSB.volume >= 1)
+        {
+            incVolume = false;
+            audioS.Pause();
+        }
     }
     public void CA()
     {
@@ -83,9 +84,11 @@ public class UI_conversation : MonoBehaviour
             {
                 canInteract = true;
                 rightcol.SetActive(false);
-                //decVolume = true;
-                //audioS.clip = characAmusic;
-                //audioS.Play();
+                leftcol.SetActive(false);
+
+                decVolume = true;
+                audioS.clip = characAmusic;
+                audioS.Play();
                 //音效控制播放，当出现UI
             }
         }
@@ -95,6 +98,7 @@ public class UI_conversation : MonoBehaviour
             characA.SetActive(false);
             count = 0;
             rightcol.SetActive(true);
+            leftcol.SetActive(true);
         }
         //距离大于定值，感叹号（characA）不出现
 
@@ -422,9 +426,10 @@ public class UI_conversation : MonoBehaviour
             {
                 canInteract = true;
                 rightcol.SetActive(false);
-                //decVolume = true;
-                //audioS.clip = characAmusic;//可以更改播放的音频，总计分两种
-                //audioS.Play();
+                leftcol.SetActive(false);
+                decVolume = true;
+                audioS.clip = characBmusic;//可以更改播放的音频，总计分两种
+                audioS.Play();
             }
         }
         //瓶子和角色距离小于定值的时候，使角色头上的感叹号（characA）出现，此时若按下Q，可对UI进行操控
@@ -433,6 +438,7 @@ public class UI_conversation : MonoBehaviour
             characB.SetActive(false);
             count = 0;
             rightcol.SetActive(true);
+            leftcol.SetActive(true);
         }
         //距离大于定值，感叹号（characA）不出现
 
@@ -742,9 +748,10 @@ public class UI_conversation : MonoBehaviour
             {
                 canInteract = true;
                 rightcol.SetActive(false);
-                //decVolume = true;
-                //audioS.clip = characAmusic;//可以更改播放的音频，总计分两种
-                //audioS.Play();
+                leftcol.SetActive(false);
+                decVolume = true;
+                audioS.clip = characAmusic;//可以更改播放的音频，总计分两种
+                audioS.Play();
             }
         }
         //瓶子和角色距离小于定值的时候，使角色头上的感叹号（characA）出现，此时若按下Q，可对UI进行操控
@@ -753,6 +760,7 @@ public class UI_conversation : MonoBehaviour
             characC.SetActive(false);
             count = 0;
             rightcol.SetActive(true);
+            leftcol.SetActive(true);
         }
         //距离大于定值，感叹号（characA）不出现
 
@@ -1099,9 +1107,10 @@ public class UI_conversation : MonoBehaviour
             {
                 canInteract = true;
                 rightcol.SetActive(false);
-                //decVolume = true;
-                //audioS.clip = characAmusic;//可以更改播放的音频，总计分两种
-                //audioS.Play();
+                leftcol.SetActive(false);
+                decVolume = true;
+                audioS.clip = characAmusic;//可以更改播放的音频，总计分两种
+                audioS.Play();
             }
         }
         //瓶子和角色距离小于定值的时候，使角色头上的感叹号（characA）出现，此时若按下Q，可对UI进行操控
@@ -1110,6 +1119,7 @@ public class UI_conversation : MonoBehaviour
             characD.SetActive(false);
             count = 0;
             rightcol.SetActive(true);
+            leftcol.SetActive(true);
         }
         //距离大于定值，感叹号（characA）不出现
 
@@ -1381,9 +1391,10 @@ public class UI_conversation : MonoBehaviour
             {
                 canInteract = true;
                 rightcol.SetActive(false);
-                //decVolume = true;
-                //audioS.clip = characAmusic;//可以更改播放的音频，总计分两种
-                //audioS.Play();
+                leftcol.SetActive(false);
+                decVolume = true;
+                audioS.clip = characAmusic;//可以更改播放的音频，总计分两种
+                audioS.Play();
             }
         }
         //瓶子和角色距离小于定值的时候，使角色头上的感叹号（characA）出现，此时若按下Q，可对UI进行操控
@@ -1392,6 +1403,7 @@ public class UI_conversation : MonoBehaviour
             characE.SetActive(false);
             count = 0;
             rightcol.SetActive(true);
+            leftcol.SetActive(true);
         }
         //距离大于定值，感叹号（characA）不出现
 
