@@ -6,13 +6,15 @@ using UnityEngine.UI;
 public class collision_bottle : MonoBehaviour
 {
 
-    bool canInteract;
+    public bool canInteract;
     public GameObject characA, characB, characC, characD, characE;
     public float distance;
     public Image characAi;
     void Start()
     {
-        characA = GameObject.FindGameObjectWithTag("characA");
+        //characA = GameObject.FindGameObjectWithTag("characA");
+        characAi.enabled = false;
+
     }
 
     void Update()
@@ -34,12 +36,16 @@ public class collision_bottle : MonoBehaviour
 
         if (canInteract == true)
         {
+
             Time.timeScale = 0;
             //先使时间暂停
             characAi.enabled=true;
             //UI图片出现
-            if (Input.GetKeyDown(KeyCode.Q))
+            //Debug.Log("1");
+            //Debug.Log(canInteract);
+            if (Input.GetKeyDown(KeyCode.F))
             {
+                Debug.Log("2");
                 characAi.enabled = false;
                 Time.timeScale = 1;
             }
